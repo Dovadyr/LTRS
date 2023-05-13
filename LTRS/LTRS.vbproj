@@ -124,14 +124,6 @@
     <Compile Include="Admin_Panel.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Panel_Datagrid.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Admin_Panel_Datagrid.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_Panel_Datagrid.vb">
-      <DependentUpon>Admin_Panel_Datagrid.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ClientForm.Designer.vb">
       <DependentUpon>ClientForm.vb</DependentUpon>
     </Compile>
@@ -228,17 +220,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Admin_Panel_Datagrid.xsc">
-      <DependentUpon>Admin_Panel_Datagrid.xsd</DependentUpon>
-    </None>
-    <None Include="Admin_Panel_Datagrid.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Admin_Panel_Datagrid.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="Admin_Panel_Datagrid.xss">
-      <DependentUpon>Admin_Panel_Datagrid.xsd</DependentUpon>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

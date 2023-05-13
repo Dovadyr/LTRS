@@ -7,6 +7,7 @@ Module database
     Public cmd As New MySqlCommand
     Public da As New MySqlDataAdapter
     Public dt As New DataTable
+    Public ds As New DataSet
 
 
     Public Function strconnection() As MySqlConnection
