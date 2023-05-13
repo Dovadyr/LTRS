@@ -119,7 +119,7 @@ Partial Class Form1
         Me.Username.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Username.Name = "Username"
         Me.Username.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Username.PlaceholderText = "Username"
+        Me.Username.PlaceholderText = "Email"
         Me.Username.SelectedText = ""
         Me.Username.Size = New System.Drawing.Size(327, 38)
         Me.Username.TabIndex = 3
