@@ -5,8 +5,10 @@
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+
         Me.Hide()
-        Dim Home As New GetLoan
-        GetLoan.ShowDialog()
+        Dim Home As New GetLoan2
+        GetLoan2.ShowDialog()
+
     End Sub
 End Class

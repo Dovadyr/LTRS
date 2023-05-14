@@ -147,9 +147,9 @@
     <Compile Include="GetLoan.Designer.vb">
       <DependentUpon>GetLoan.vb</DependentUpon>
     </Compile>
-    <Compile Include="GetLoan.vb">
+    <EmbeddedResource Include="GetLoan.vb">
       <SubType>Form</SubType>
-    </Compile>
+    </EmbeddedResource>
     <Compile Include="GetLoan2.Designer.vb">
       <DependentUpon>GetLoan2.vb</DependentUpon>
     </Compile>
@@ -205,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetLoan.resx">
+      <DependentUpon>GetLoan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetLoan2.resx">
+      <DependentUpon>GetLoan2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>

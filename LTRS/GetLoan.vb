@@ -51,4 +51,5 @@ Public Class GetLoan
         Dim GetLoan As New GetLoan2
         GetLoan2.ShowDialog()
     End Sub
+
 End Class
