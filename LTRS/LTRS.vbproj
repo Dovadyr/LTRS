@@ -156,7 +156,6 @@
     <Compile Include="GetLoan2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GlobalVariables.vb" />
     <Compile Include="Home.Designer.vb">
       <DependentUpon>Home.vb</DependentUpon>
     </Compile>

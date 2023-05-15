@@ -5,7 +5,6 @@ Public Class GetLoan
     Private Sub GetLoan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-
     End Sub
 
 
@@ -15,10 +14,10 @@ Public Class GetLoan
         Try
             Dim mail As New MailMessage()
             Dim smtpserver As New SmtpClient("smtp.gmail.com")
-            mail.From = New MailAddress(emailHolder)
+            mail.From = New MailAddress("ltrsofficial31@gmail.com")
             mail.To.Add("ltrsofficial0@gmail.com") 'change email
             mail.Subject = "Initial Loan Requirements"
-            mail.Body = "" 'put stuff from other deets
+            mail.Body = "test" 'put stuff from other deets
 
             Dim Attach As System.Net.Mail.Attachment
             Attach = New System.Net.Mail.Attachment(attach1.Text)
@@ -28,7 +27,7 @@ Public Class GetLoan
 
 
             smtpserver.Port = 587
-            smtpserver.Credentials = New System.Net.NetworkCredential(emailHolder, passHolder)
+            smtpserver.Credentials = New System.Net.NetworkCredential("ltrsofficial31@gmail.com", "qrowiwzlsnhprwgt")
             smtpserver.EnableSsl = True
             smtpserver.Send(mail)
             MsgBox("Mail has been Successfully Sent! ", MsgBoxStyle.Information)

@@ -31,7 +31,6 @@ Public Class Form1
                     Username.BorderColor = System.Drawing.Color.DodgerBlue
                     Password.BorderColor = System.Drawing.Color.DodgerBlue
 
-                    emailHolder = Username.Text
                     Username.Clear()
                     Password.Clear()
 
