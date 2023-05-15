@@ -22,8 +22,10 @@ Public Class GetLoan
 
             Dim Attach As System.Net.Mail.Attachment
             Attach = New System.Net.Mail.Attachment(attach1.Text)
+            mail.Attachments.Add(Attach)
             Attach = New System.Net.Mail.Attachment(attach2.Text)
             mail.Attachments.Add(Attach)
+
 
             smtpserver.Port = 587
             smtpserver.Credentials = New System.Net.NetworkCredential(emailHolder, passHolder)
