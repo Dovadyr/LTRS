@@ -3,7 +3,6 @@ Imports MySql.Data.MySqlClient
 
 Public Class Form1
 
-
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         If String.IsNullOrWhiteSpace(Password.Text) Or String.IsNullOrWhiteSpace(Username.Text) Then
             MessageBox.Show("Enter complete data first!")
@@ -31,8 +30,11 @@ Public Class Form1
 
                     Username.BorderColor = System.Drawing.Color.DodgerBlue
                     Password.BorderColor = System.Drawing.Color.DodgerBlue
+
+                    emailHolder = Username.Text
                     Username.Clear()
                     Password.Clear()
+
 
                 End If
             Catch ex As Exception
@@ -46,14 +48,12 @@ Public Class Form1
 
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
         Me.Hide()
-        Dim Form1 As New CPass
-        Form1.ShowDialog()
+        CPass.ShowDialog()
     End Sub
 
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
         Me.Hide()
-        Dim Form1 As New Register
-        Form1.ShowDialog()
+        Register.ShowDialog()
     End Sub
 
     Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
@@ -63,7 +63,6 @@ Public Class Form1
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         Me.Hide()
-        Dim Form1 As New MainHome
-        Form1.ShowDialog()
+        MainHome.ShowDialog()
     End Sub
 End Class

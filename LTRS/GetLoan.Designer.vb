@@ -14,6 +14,12 @@ Partial Class GetLoan
         End Try
     End Sub
 
+    Friend WithEvents attach2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnBill As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
@@ -27,18 +33,15 @@ Partial Class GetLoan
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
-        Me.txtpassword = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.txtsub = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txtfrom = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
-        Me.txtbody = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.attach2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnBill = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.attach1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnID = New Guna.UI2.WinForms.Guna2Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -78,22 +81,57 @@ Partial Class GetLoan
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
-        Me.Guna2Panel1.Controls.Add(Me.txtpassword)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
-        Me.Guna2Panel1.Controls.Add(Me.txtsub)
-        Me.Guna2Panel1.Controls.Add(Me.txtfrom)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Button4)
-        Me.Guna2Panel1.Controls.Add(Me.txtbody)
+        Me.Guna2Panel1.Controls.Add(Me.attach2)
+        Me.Guna2Panel1.Controls.Add(Me.btnBill)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button2)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button4)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Guna2Panel1.Controls.Add(Me.attach1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
+        Me.Guna2Panel1.Controls.Add(Me.btnID)
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 48)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(677, 697)
         Me.Guna2Panel1.TabIndex = 2
+        '
+        'attach2
+        '
+        Me.attach2.BackColor = System.Drawing.Color.Transparent
+        Me.attach2.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.attach2.Location = New System.Drawing.Point(194, 334)
+        Me.attach2.Name = "attach2"
+        Me.attach2.Size = New System.Drawing.Size(6, 19)
+        Me.attach2.TabIndex = 19
+        Me.attach2.Text = "l"
+        '
+        'btnBill
+        '
+        Me.btnBill.AutoRoundedCorners = True
+        Me.btnBill.BackColor = System.Drawing.Color.Transparent
+        Me.btnBill.BorderRadius = 20
+        Me.btnBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnBill.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnBill.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnBill.ForeColor = System.Drawing.Color.White
+        Me.btnBill.Location = New System.Drawing.Point(37, 321)
+        Me.btnBill.Name = "btnBill"
+        Me.btnBill.Size = New System.Drawing.Size(127, 42)
+        Me.btnBill.TabIndex = 18
+        Me.btnBill.Text = "Attached File"
+        '
+        'Guna2HtmlLabel3
+        '
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(37, 285)
+        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(142, 30)
+        Me.Guna2HtmlLabel3.TabIndex = 17
+        Me.Guna2HtmlLabel3.Text = "Proof of Billing :"
         '
         'Guna2Button2
         '
@@ -111,76 +149,6 @@ Partial Class GetLoan
         Me.Guna2Button2.Size = New System.Drawing.Size(176, 48)
         Me.Guna2Button2.TabIndex = 16
         Me.Guna2Button2.Text = "Next"
-        '
-        'txtpassword
-        '
-        Me.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtpassword.DefaultText = ""
-        Me.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtpassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtpassword.Location = New System.Drawing.Point(122, 117)
-        Me.txtpassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.txtpassword.PlaceholderText = ""
-        Me.txtpassword.SelectedText = ""
-        Me.txtpassword.Size = New System.Drawing.Size(493, 31)
-        Me.txtpassword.TabIndex = 15
-        '
-        'Guna2HtmlLabel4
-        '
-        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(37, 117)
-        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(89, 30)
-        Me.Guna2HtmlLabel4.TabIndex = 14
-        Me.Guna2HtmlLabel4.Text = "Password:"
-        '
-        'txtsub
-        '
-        Me.txtsub.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtsub.DefaultText = ""
-        Me.txtsub.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtsub.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtsub.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtsub.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtsub.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtsub.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtsub.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtsub.Location = New System.Drawing.Point(122, 179)
-        Me.txtsub.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtsub.Name = "txtsub"
-        Me.txtsub.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtsub.PlaceholderText = ""
-        Me.txtsub.SelectedText = ""
-        Me.txtsub.Size = New System.Drawing.Size(493, 31)
-        Me.txtsub.TabIndex = 6
-        '
-        'txtfrom
-        '
-        Me.txtfrom.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtfrom.DefaultText = ""
-        Me.txtfrom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtfrom.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtfrom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtfrom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtfrom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtfrom.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtfrom.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtfrom.Location = New System.Drawing.Point(122, 53)
-        Me.txtfrom.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtfrom.Name = "txtfrom"
-        Me.txtfrom.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtfrom.PlaceholderText = ""
-        Me.txtfrom.SelectedText = ""
-        Me.txtfrom.Size = New System.Drawing.Size(493, 31)
-        Me.txtfrom.TabIndex = 5
         '
         'Guna2Button4
         '
@@ -202,52 +170,21 @@ Partial Class GetLoan
         Me.Guna2Button4.TabIndex = 12
         Me.Guna2Button4.Text = "Send"
         '
-        'txtbody
-        '
-        Me.txtbody.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtbody.DefaultText = ""
-        Me.txtbody.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtbody.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtbody.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtbody.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtbody.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtbody.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtbody.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtbody.Location = New System.Drawing.Point(122, 315)
-        Me.txtbody.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtbody.Multiline = True
-        Me.txtbody.Name = "txtbody"
-        Me.txtbody.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtbody.PlaceholderText = ""
-        Me.txtbody.SelectedText = ""
-        Me.txtbody.Size = New System.Drawing.Size(493, 238)
-        Me.txtbody.TabIndex = 11
-        '
-        'Guna2HtmlLabel3
-        '
-        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(37, 315)
-        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(57, 30)
-        Me.Guna2HtmlLabel3.TabIndex = 10
-        Me.Guna2HtmlLabel3.Text = "Body :"
-        '
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 22.0!)
         Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(37, 53)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(58, 30)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(338, 50)
         Me.Guna2HtmlLabel1.TabIndex = 3
-        Me.Guna2HtmlLabel1.Text = "From :"
+        Me.Guna2HtmlLabel1.Text = "Initial Requirements :"
         '
         'attach1
         '
         Me.attach1.BackColor = System.Drawing.Color.Transparent
         Me.attach1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.attach1.Location = New System.Drawing.Point(201, 254)
+        Me.attach1.Location = New System.Drawing.Point(194, 210)
         Me.attach1.Name = "attach1"
         Me.attach1.Size = New System.Drawing.Size(6, 19)
         Me.attach1.TabIndex = 13
@@ -257,29 +194,29 @@ Partial Class GetLoan
         '
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(37, 179)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(37, 162)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(77, 30)
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(80, 30)
         Me.Guna2HtmlLabel2.TabIndex = 4
-        Me.Guna2HtmlLabel2.Text = "Subject :"
+        Me.Guna2HtmlLabel2.Text = "Valid ID :"
         '
-        'Guna2Button1
+        'btnID
         '
-        Me.Guna2Button1.AutoRoundedCorners = True
-        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.BorderRadius = 20
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(37, 240)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(127, 42)
-        Me.Guna2Button1.TabIndex = 7
-        Me.Guna2Button1.Text = "Attached File"
+        Me.btnID.AutoRoundedCorners = True
+        Me.btnID.BackColor = System.Drawing.Color.Transparent
+        Me.btnID.BorderRadius = 20
+        Me.btnID.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnID.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnID.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnID.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnID.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnID.ForeColor = System.Drawing.Color.White
+        Me.btnID.Location = New System.Drawing.Point(37, 198)
+        Me.btnID.Name = "btnID"
+        Me.btnID.Size = New System.Drawing.Size(127, 42)
+        Me.btnID.TabIndex = 7
+        Me.btnID.Text = "Attached File"
         '
         'OpenFileDialog1
         '
@@ -308,17 +245,10 @@ Partial Class GetLoan
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents txtsub As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents txtfrom As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnID As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents txtbody As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents attach1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents txtpassword As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+
 End Class

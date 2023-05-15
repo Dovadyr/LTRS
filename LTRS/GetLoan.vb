@@ -8,27 +8,25 @@ Public Class GetLoan
 
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        OpenFileDialog1.ShowDialog()
-        attach1.Text = OpenFileDialog1.FileName
-    End Sub
+
 
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
 
         Try
             Dim mail As New MailMessage()
             Dim smtpserver As New SmtpClient("smtp.gmail.com")
-            mail.From = New MailAddress(txtfrom.Text)
-            mail.To.Add("ltrsofficial0@gmail.com")
-            mail.Subject = txtsub.Text
-            mail.Body = txtbody.Text
+            mail.From = New MailAddress(emailHolder)
+            mail.To.Add("ltrsofficial0@gmail.com") 'change email
+            mail.Subject = "Initial Loan Requirements"
+            mail.Body = "" 'put stuff from other deets
 
             Dim Attach As System.Net.Mail.Attachment
             Attach = New System.Net.Mail.Attachment(attach1.Text)
+            Attach = New System.Net.Mail.Attachment(attach2.Text)
             mail.Attachments.Add(Attach)
 
             smtpserver.Port = 587
-            smtpserver.Credentials = New System.Net.NetworkCredential(txtfrom.Text, txtpassword.Text)
+            smtpserver.Credentials = New System.Net.NetworkCredential(emailHolder, passHolder)
             smtpserver.EnableSsl = True
             smtpserver.Send(mail)
             MsgBox("Mail has been Successfully Sent! ", MsgBoxStyle.Information)
@@ -48,8 +46,16 @@ Public Class GetLoan
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         Me.Hide()
-        Dim GetLoan As New GetLoan2
-        GetLoan2.ShowDialog()
+
     End Sub
 
+    Private Sub btnID_Click(sender As Object, e As EventArgs) Handles btnID.Click
+        OpenFileDialog1.ShowDialog()
+        attach1.Text = OpenFileDialog1.FileName
+    End Sub
+
+    Private Sub btnBill_Click(sender As Object, e As EventArgs) Handles btnBill.Click
+        OpenFileDialog1.ShowDialog()
+        attach2.Text = OpenFileDialog1.FileName
+    End Sub
 End Class

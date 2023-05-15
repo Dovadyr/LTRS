@@ -23,4 +23,20 @@ Public Class GetLoan2
         computeBox.Text = textInputA + " x " + textInputB
         outputTotal.Text = d
     End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        Me.Hide()
+        GetLoan.ShowDialog()
+    End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        inputLoan.Clear()
+        computeBox.Clear()
+        outputTotal.Clear()
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        Me.Hide()
+        Home.ShowDialog()
+    End Sub
 End Class

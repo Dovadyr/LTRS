@@ -42,7 +42,6 @@ Public Class CPass
 
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
         Me.Hide()
-        Dim CPass As New Form1
-        CPass.ShowDialog()
+        Form1.ShowDialog()
     End Sub
 End Class
