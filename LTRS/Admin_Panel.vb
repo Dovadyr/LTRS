@@ -1,20 +1,17 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports MySql.Data.MySqlClient
+
 Public Class Admin_Panel
     Dim CurrentMonth As String = Today.Month
     Dim CurrentYear As String = Today.Year
+    Dim CurrentDay As String = Today.Day
 
     Private Sub Admin_Panel_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         'for datagridview
         Try
-            reloaData("SELECT loans.transacID, loans.accID,
-                       loans.transacDate, loans.principal, 
-                       computation.totalAmount  
-                       FROM loans
-                       LEFT JOIN computation 
-                       ON loans.transacID = computation.transacID", Guna2DataGridView1)
+            reloaData("SELECT transacID, accID, transacDate, principal, interest, total FROM loans", Guna2DataGridView1)
 
         Catch
 
@@ -41,7 +38,7 @@ Public Class Admin_Panel
         'for Earnings
         Try
             strcon.Open()
-            cmd.CommandText = "SELECT SUM(amount) AS Paid FROM payments WHERE DATE(payDate) BETWEEN '@year-@month-01' AND '2023-5-31'"
+            cmd.CommandText = "SELECT SUM(amount) AS Paid FROM payments WHERE DATE(payDate) BETWEEN '@year-@month-01' AND '@year-@month-31'"
 
             cmd.Parameters.Add("@month", MySqlDbType.VarChar).Value = CurrentMonth
             cmd.Parameters.Add("@year", MySqlDbType.VarChar).Value = CurrentYear

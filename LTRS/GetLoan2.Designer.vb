@@ -37,6 +37,8 @@ Partial Class GetLoan2
         Me.inputLoan = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.interestBox = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -75,6 +77,8 @@ Partial Class GetLoan2
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
+        Me.Guna2Panel1.Controls.Add(Me.interestBox)
         Me.Guna2Panel1.Controls.Add(Me.Button1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
@@ -92,7 +96,7 @@ Partial Class GetLoan2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(288, 214)
+        Me.Button1.Location = New System.Drawing.Point(288, 149)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(92, 23)
         Me.Button1.TabIndex = 25
@@ -148,7 +152,7 @@ Partial Class GetLoan2
         Me.outputTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.outputTotal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.outputTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.outputTotal.Location = New System.Drawing.Point(179, 463)
+        Me.outputTotal.Location = New System.Drawing.Point(179, 510)
         Me.outputTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.outputTotal.Name = "outputTotal"
         Me.outputTotal.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -165,7 +169,7 @@ Partial Class GetLoan2
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.White
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(270, 324)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(270, 223)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(128, 30)
         Me.Guna2HtmlLabel3.TabIndex = 21
@@ -187,7 +191,7 @@ Partial Class GetLoan2
         Me.computeBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.computeBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.computeBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.computeBox.Location = New System.Drawing.Point(179, 361)
+        Me.computeBox.Location = New System.Drawing.Point(179, 260)
         Me.computeBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.computeBox.Name = "computeBox"
         Me.computeBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -204,7 +208,7 @@ Partial Class GetLoan2
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.White
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(209, 426)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(209, 473)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(255, 30)
         Me.Guna2HtmlLabel2.TabIndex = 19
@@ -226,7 +230,7 @@ Partial Class GetLoan2
         Me.inputLoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.inputLoan.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.inputLoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.inputLoan.Location = New System.Drawing.Point(179, 159)
+        Me.inputLoan.Location = New System.Drawing.Point(179, 94)
         Me.inputLoan.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.inputLoan.Name = "inputLoan"
         Me.inputLoan.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -242,7 +246,7 @@ Partial Class GetLoan2
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.White
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(248, 122)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(248, 57)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(180, 30)
         Me.Guna2HtmlLabel1.TabIndex = 17
@@ -265,6 +269,45 @@ Partial Class GetLoan2
         Me.Guna2Button2.Size = New System.Drawing.Size(176, 48)
         Me.Guna2Button2.TabIndex = 16
         Me.Guna2Button2.Text = "Next"
+        '
+        'Guna2HtmlLabel4
+        '
+        Me.Guna2HtmlLabel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(248, 343)
+        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(175, 30)
+        Me.Guna2HtmlLabel4.TabIndex = 27
+        Me.Guna2HtmlLabel4.Text = "Computed Interest :"
+        Me.Guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'interestBox
+        '
+        Me.interestBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.interestBox.AutoRoundedCorners = True
+        Me.interestBox.BorderRadius = 23
+        Me.interestBox.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.interestBox.DefaultText = ""
+        Me.interestBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.interestBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.interestBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.interestBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.interestBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.interestBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.interestBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.interestBox.Location = New System.Drawing.Point(179, 380)
+        Me.interestBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.interestBox.Name = "interestBox"
+        Me.interestBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.interestBox.PlaceholderText = "00.00"
+        Me.interestBox.ReadOnly = True
+        Me.interestBox.SelectedText = ""
+        Me.interestBox.Size = New System.Drawing.Size(312, 48)
+        Me.interestBox.TabIndex = 26
+        Me.interestBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GetLoan2
         '
@@ -299,4 +342,6 @@ Partial Class GetLoan2
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents inputLoan As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents interestBox As Guna.UI2.WinForms.Guna2TextBox
 End Class

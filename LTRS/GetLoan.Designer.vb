@@ -33,17 +33,18 @@ Partial Class GetLoan
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.attach1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.attach2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnBill = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.attach1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnID = New Guna.UI2.WinForms.Guna2Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -82,6 +83,7 @@ Partial Class GetLoan
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel5)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
         Me.Guna2Panel1.Controls.Add(Me.attach1)
@@ -97,6 +99,36 @@ Partial Class GetLoan
         Me.Guna2Panel1.Size = New System.Drawing.Size(677, 697)
         Me.Guna2Panel1.TabIndex = 2
         '
+        'Guna2HtmlLabel5
+        '
+        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(182, 334)
+        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(6, 19)
+        Me.Guna2HtmlLabel5.TabIndex = 21
+        Me.Guna2HtmlLabel5.Text = "l"
+        '
+        'Guna2HtmlLabel4
+        '
+        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(182, 209)
+        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(6, 19)
+        Me.Guna2HtmlLabel4.TabIndex = 20
+        Me.Guna2HtmlLabel4.Text = "l"
+        '
+        'attach1
+        '
+        Me.attach1.BackColor = System.Drawing.Color.Transparent
+        Me.attach1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.attach1.Location = New System.Drawing.Point(194, 209)
+        Me.attach1.Name = "attach1"
+        Me.attach1.Size = New System.Drawing.Size(3, 2)
+        Me.attach1.TabIndex = 13
+        Me.attach1.Text = Nothing
+        '
         'attach2
         '
         Me.attach2.BackColor = System.Drawing.Color.Transparent
@@ -105,6 +137,7 @@ Partial Class GetLoan
         Me.attach2.Name = "attach2"
         Me.attach2.Size = New System.Drawing.Size(3, 2)
         Me.attach2.TabIndex = 19
+        Me.attach2.Text = Nothing
         '
         'btnBill
         '
@@ -147,7 +180,7 @@ Partial Class GetLoan
         Me.Guna2Button4.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button4.ForeColor = System.Drawing.Color.Black
-        Me.Guna2Button4.Location = New System.Drawing.Point(451, 547)
+        Me.Guna2Button4.Location = New System.Drawing.Point(492, 598)
         Me.Guna2Button4.Name = "Guna2Button4"
         Me.Guna2Button4.PressedColor = System.Drawing.Color.Transparent
         Me.Guna2Button4.Size = New System.Drawing.Size(164, 72)
@@ -163,15 +196,6 @@ Partial Class GetLoan
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(338, 50)
         Me.Guna2HtmlLabel1.TabIndex = 3
         Me.Guna2HtmlLabel1.Text = "Initial Requirements :"
-        '
-        'attach1
-        '
-        Me.attach1.BackColor = System.Drawing.Color.Transparent
-        Me.attach1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.attach1.Location = New System.Drawing.Point(194, 209)
-        Me.attach1.Name = "attach1"
-        Me.attach1.Size = New System.Drawing.Size(3, 2)
-        Me.attach1.TabIndex = 13
         '
         'Guna2HtmlLabel2
         '
@@ -205,25 +229,25 @@ Partial Class GetLoan
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Guna2HtmlLabel4
+        'Guna2Button1
         '
-        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(182, 209)
-        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(6, 19)
-        Me.Guna2HtmlLabel4.TabIndex = 20
-        Me.Guna2HtmlLabel4.Text = "l"
-        '
-        'Guna2HtmlLabel5
-        '
-        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(182, 334)
-        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(6, 19)
-        Me.Guna2HtmlLabel5.TabIndex = 21
-        Me.Guna2HtmlLabel5.Text = "l"
+        Me.Guna2Button1.AutoRoundedCorners = True
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderRadius = 35
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.Black
+        Me.Guna2Button1.Location = New System.Drawing.Point(24, 598)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.PressedColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.Size = New System.Drawing.Size(164, 72)
+        Me.Guna2Button1.TabIndex = 22
+        Me.Guna2Button1.Text = "Back"
         '
         'GetLoan
         '
@@ -254,4 +278,5 @@ Partial Class GetLoan
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 End Class

@@ -34,6 +34,7 @@ Public Class GetLoan2
             textInputB = CType(b, String)
             loanAmountHolder = textInputA
 
+            interestBox.Text = c
             computeBox.Text = textInputA + " x " + textInputB
             outputTotal.Text = d
         End If

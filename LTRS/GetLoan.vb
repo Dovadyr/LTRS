@@ -3,8 +3,15 @@ Imports Microsoft
 Imports Org.BouncyCastle.X509
 
 Public Class GetLoan
+    Dim dateToday As Date = Date.Today
+    Dim dateDue As Date = DateAdd("d", 30, dateToday)
+
+    Dim qdateToday As String = dateToday.ToString("yyyy-MM-dd")
+    Dim qdateDue As String = dateDue.ToString("yyyy-MM-dd")
+
     Dim attach1Flag As Integer = 0
     Dim attach2Flag As Integer = 0
+
     Private Sub GetLoan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -38,6 +45,15 @@ Public Class GetLoan
                     MsgBox("Mail has been Successfully Sent! ", MsgBoxStyle.Information)
                 Catch ex As Exception
                     MsgBox(ex.Message, vbCritical)
+                Finally
+                    create("INSERT INTO loans (`accID`, `transacDate`, `dueDate`, `principal`, `interest`, `total`, `status`)VALUES('" & Form1.UserID & "', '" & qdateToday & "', '" & qdateDue & "', '" & GetLoan2.inputLoan.Text & "', '" & GetLoan2.interestBox.Text & "', '" & GetLoan2.outputTotal.Text & "', '0')")
+
+                    Dim msg As String = "Registered Successfully"
+                    Dim title As String = "Registration"
+                    Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    Me.Hide()
+                    Home.ShowDialog()
                 End Try
 
             Else
@@ -85,5 +101,10 @@ Public Class GetLoan
         Else
             attach2Flag = 1
         End If
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        Me.Hide()
+        GetLoan2.ShowDialog()
     End Sub
 End Class

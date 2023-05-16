@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Form1
+    Public UserID As Integer
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         If String.IsNullOrWhiteSpace(Password.Text) Or String.IsNullOrWhiteSpace(Username.Text) Then
@@ -16,14 +17,34 @@ Public Class Form1
                 cmd.Parameters.Add("@pass", MySqlDbType.VarChar).Value = Password.Text
                 da.SelectCommand = cmd
                 da.Fill(dt)
-                strcon.Close()
                 da.Dispose()
+                cmd.Parameters.Clear()
 
                 If dt.Rows.Count = 0 Then
                     Username.BorderColor = System.Drawing.Color.Tomato
                     Password.BorderColor = System.Drawing.Color.Tomato
                     MessageBox.Show("Invalid Email / Password", "Login Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
                 Else
+                    Try
+                        cmd.CommandText = "SELECT id FROM login WHERE email = @user"
+
+                        cmd.Parameters.Add("@user", MySqlDbType.VarChar).Value = Username.Text
+
+                        Dim myreader As MySqlDataReader = cmd.ExecuteReader
+                        If (myreader.Read()) Then
+                            UserID = myreader("id")
+                        Else
+                            MessageBox.Show("No Data Found")
+                        End If
+
+                    Catch ex As Exception
+                        MessageBox.Show("Error" & ex.Message.ToString)
+                    Finally
+                        cmd.Parameters.Clear()
+
+                    End Try
+
                     Dim Form1 As New Home
                     Home.Show()
                     Me.Hide()
@@ -40,6 +61,7 @@ Public Class Form1
                 MessageBox.Show("Error" & ex.Message.ToString)
             Finally
                 cmd.Parameters.Clear()
+                strcon.Close()
             End Try
 
         End If
