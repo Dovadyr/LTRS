@@ -1,7 +1,11 @@
 ﻿Imports System.Globalization
+Imports System.Reflection
 Imports System.Text.RegularExpressions
 
 Public Class GetLoan2
+    Dim aFlag As Boolean
+
+    Public loanAmountHolder As String
     Private Sub inputLoan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles inputLoan.KeyPress
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
             e.Handled = True
@@ -11,25 +15,42 @@ Public Class GetLoan2
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim textInputA As String
-        Dim textInputB As String
-        Dim a = inputLoan.Text
-        Dim b = 0.05
-        Dim c = a * b 'compute interest
-        Dim d = a + c 'add principal and interest
+        If inputLoan.Text = "" Then
+            MessageBox.Show("Please input amount to be calculated")
 
-        textInputA = CType(a, String)
-        textInputB = CType(b, String)
-        computeBox.Text = textInputA + " x " + textInputB
-        outputTotal.Text = d
+        Else
+
+            aFlag = True
+
+
+            Dim textInputA As String
+            Dim textInputB As String
+            Dim a = inputLoan.Text
+            Dim b = 0.05
+            Dim c = a * b 'compute interest
+            Dim d = a + c 'add principal and interest
+
+            textInputA = CType(a, String)
+            textInputB = CType(b, String)
+            loanAmountHolder = textInputA
+
+            computeBox.Text = textInputA + " x " + textInputB
+            outputTotal.Text = d
+        End If
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
-        Me.Hide()
-        GetLoan.ShowDialog()
+        If Not aFlag = False Then
+            Me.Hide()
+            GetLoan.ShowDialog()
+
+        Else
+            MessageBox.Show("Please enter the desired loan amount and press COMPUTE button")
+        End If
     End Sub
 
     Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        aFlag = False
         inputLoan.Clear()
         computeBox.Clear()
         outputTotal.Clear()
