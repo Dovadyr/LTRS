@@ -13,7 +13,7 @@ Public Class Admin_Panel
 
         'for datagridview
         Try
-            reloaData("SELECT transacID, accID, transacDate, principal, interest, total FROM loans WHERE loanstatus = 'Pending'", Guna2DataGridView1)
+            reloaData("SELECT transacID, accID, principal, interest, total FROM loans WHERE loanstatus = 'Pending'", Guna2DataGridView1)
 
         Catch
 
@@ -79,15 +79,18 @@ Public Class Admin_Panel
         End Try
     End Sub
 
-    Private Sub Guna2GradientCircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientCircleButton1.Click
-        Me.Hide()
-        ClientForm.ShowDialog()
-    End Sub
-
-    Private Sub Guna2GradientCircleButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientCircleButton2.Click
+    Private Sub btnToLoans_Click(sender As Object, e As EventArgs) Handles btnToLoans.Click
         Me.Hide()
         LoansForm.ShowDialog()
     End Sub
 
+    Private Sub btnToEdit_Click(sender As Object, e As EventArgs) Handles btnToEdit.Click
 
+    End Sub
+
+    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
+        Me.Close()
+        Application.Exit()
+
+    End Sub
 End Class

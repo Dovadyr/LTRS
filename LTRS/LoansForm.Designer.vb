@@ -31,8 +31,10 @@ Partial Class LoansForm
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GradientPanel2 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.txtEmail = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnApply = New Guna.UI2.WinForms.Guna2Button()
         Me.txtTransac = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.comboStatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -50,6 +52,7 @@ Partial Class LoansForm
         Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,12 +67,13 @@ Partial Class LoansForm
         Me.CurrentMoney = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2GradientPanel2.SuspendLayout()
         Me.Guna2GradientPanel1.SuspendLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
+        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -94,7 +98,6 @@ Partial Class LoansForm
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.Controls.Add(Me.Button1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GradientPanel2)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GradientPanel1)
@@ -123,8 +126,10 @@ Partial Class LoansForm
         'Guna2GradientPanel2
         '
         Me.Guna2GradientPanel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Guna2GradientPanel2.Controls.Add(Me.txtEmail)
         Me.Guna2GradientPanel2.Controls.Add(Me.btnApply)
         Me.Guna2GradientPanel2.Controls.Add(Me.txtTransac)
+        Me.Guna2GradientPanel2.Controls.Add(Me.Guna2HtmlLabel11)
         Me.Guna2GradientPanel2.Controls.Add(Me.Guna2HtmlLabel9)
         Me.Guna2GradientPanel2.Controls.Add(Me.comboStatus)
         Me.Guna2GradientPanel2.Controls.Add(Me.Guna2HtmlLabel8)
@@ -138,8 +143,29 @@ Partial Class LoansForm
         Me.Guna2GradientPanel2.Controls.Add(Me.Guna2HtmlLabel5)
         Me.Guna2GradientPanel2.Location = New System.Drawing.Point(12, 68)
         Me.Guna2GradientPanel2.Name = "Guna2GradientPanel2"
-        Me.Guna2GradientPanel2.Size = New System.Drawing.Size(919, 136)
+        Me.Guna2GradientPanel2.Size = New System.Drawing.Size(1234, 136)
         Me.Guna2GradientPanel2.TabIndex = 15
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtEmail.DefaultText = ""
+        Me.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtEmail.Location = New System.Drawing.Point(536, 54)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtEmail.PlaceholderText = ""
+        Me.txtEmail.ReadOnly = True
+        Me.txtEmail.SelectedText = ""
+        Me.txtEmail.Size = New System.Drawing.Size(207, 33)
+        Me.txtEmail.TabIndex = 30
         '
         'btnApply
         '
@@ -151,7 +177,7 @@ Partial Class LoansForm
         Me.btnApply.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnApply.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnApply.ForeColor = System.Drawing.Color.White
-        Me.btnApply.Location = New System.Drawing.Point(800, 43)
+        Me.btnApply.Location = New System.Drawing.Point(1069, 42)
         Me.btnApply.Name = "btnApply"
         Me.btnApply.Size = New System.Drawing.Size(96, 45)
         Me.btnApply.TabIndex = 16
@@ -168,7 +194,7 @@ Partial Class LoansForm
         Me.txtTransac.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtTransac.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtTransac.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtTransac.Location = New System.Drawing.Point(549, 14)
+        Me.txtTransac.Location = New System.Drawing.Point(536, 14)
         Me.txtTransac.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTransac.Name = "txtTransac"
         Me.txtTransac.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -178,11 +204,21 @@ Partial Class LoansForm
         Me.txtTransac.Size = New System.Drawing.Size(207, 33)
         Me.txtTransac.TabIndex = 28
         '
+        'Guna2HtmlLabel11
+        '
+        Me.Guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.10084!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel11.Location = New System.Drawing.Point(373, 54)
+        Me.Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
+        Me.Guna2HtmlLabel11.Size = New System.Drawing.Size(69, 27)
+        Me.Guna2HtmlLabel11.TabIndex = 29
+        Me.Guna2HtmlLabel11.Text = "Email :"
+        '
         'Guna2HtmlLabel9
         '
         Me.Guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.10084!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(386, 14)
+        Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(373, 14)
         Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
         Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(157, 27)
         Me.Guna2HtmlLabel9.TabIndex = 27
@@ -199,7 +235,7 @@ Partial Class LoansForm
         Me.comboStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.comboStatus.ItemHeight = 30
         Me.comboStatus.Items.AddRange(New Object() {"Applied", "Approved", "Declined", "Finished", "Suspended"})
-        Me.comboStatus.Location = New System.Drawing.Point(549, 95)
+        Me.comboStatus.Location = New System.Drawing.Point(797, 55)
         Me.comboStatus.Name = "comboStatus"
         Me.comboStatus.Size = New System.Drawing.Size(207, 36)
         Me.comboStatus.TabIndex = 26
@@ -209,7 +245,7 @@ Partial Class LoansForm
         '
         Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.10084!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(386, 94)
+        Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(834, 14)
         Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
         Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(132, 27)
         Me.Guna2HtmlLabel8.TabIndex = 25
@@ -226,7 +262,7 @@ Partial Class LoansForm
         Me.txtAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtAmount.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtAmount.Location = New System.Drawing.Point(549, 55)
+        Me.txtAmount.Location = New System.Drawing.Point(536, 95)
         Me.txtAmount.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtAmount.Name = "txtAmount"
         Me.txtAmount.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -240,7 +276,7 @@ Partial Class LoansForm
         '
         Me.Guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.10084!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel10.Location = New System.Drawing.Point(386, 54)
+        Me.Guna2HtmlLabel10.Location = New System.Drawing.Point(373, 94)
         Me.Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
         Me.Guna2HtmlLabel10.Size = New System.Drawing.Size(144, 27)
         Me.Guna2HtmlLabel10.TabIndex = 23
@@ -257,7 +293,7 @@ Partial Class LoansForm
         Me.txtLname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtLname.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtLname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtLname.Location = New System.Drawing.Point(142, 94)
+        Me.txtLname.Location = New System.Drawing.Point(129, 94)
         Me.txtLname.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtLname.Name = "txtLname"
         Me.txtLname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -271,7 +307,7 @@ Partial Class LoansForm
         '
         Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.10084!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(16, 94)
+        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(3, 94)
         Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(119, 27)
         Me.Guna2HtmlLabel7.TabIndex = 17
@@ -288,7 +324,7 @@ Partial Class LoansForm
         Me.txtFname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtFname.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtFname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtFname.Location = New System.Drawing.Point(142, 54)
+        Me.txtFname.Location = New System.Drawing.Point(129, 54)
         Me.txtFname.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtFname.Name = "txtFname"
         Me.txtFname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -302,7 +338,7 @@ Partial Class LoansForm
         '
         Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.10084!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(16, 54)
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(3, 54)
         Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(120, 27)
         Me.Guna2HtmlLabel6.TabIndex = 15
@@ -319,7 +355,7 @@ Partial Class LoansForm
         Me.txtAcc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtAcc.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtAcc.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtAcc.Location = New System.Drawing.Point(142, 14)
+        Me.txtAcc.Location = New System.Drawing.Point(129, 14)
         Me.txtAcc.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtAcc.Name = "txtAcc"
         Me.txtAcc.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -333,7 +369,7 @@ Partial Class LoansForm
         '
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.10084!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(16, 14)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(3, 14)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(122, 27)
         Me.Guna2HtmlLabel5.TabIndex = 13
@@ -392,7 +428,7 @@ Partial Class LoansForm
         Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Guna2DataGridView1.ColumnHeadersHeight = 50
         Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column5, Me.Column6, Me.Column3, Me.Column8, Me.Column2, Me.Column7, Me.button})
+        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column9, Me.Column5, Me.Column6, Me.Column3, Me.Column8, Me.Column2, Me.Column7, Me.button})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -446,6 +482,13 @@ Partial Class LoansForm
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "email"
+        Me.Column9.HeaderText = "Email"
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
         '
         'Column5
         '
@@ -581,14 +624,10 @@ Partial Class LoansForm
         Me.Guna2HtmlLabel1.TabIndex = 0
         Me.Guna2HtmlLabel1.Text = "Current Fund Amount :"
         '
-        'Button1
+        'FileSystemWatcher1
         '
-        Me.Button1.Location = New System.Drawing.Point(1005, 131)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.FileSystemWatcher1.EnableRaisingEvents = True
+        Me.FileSystemWatcher1.SynchronizingObject = Me
         '
         'LoansForm
         '
@@ -610,6 +649,7 @@ Partial Class LoansForm
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
+        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -637,8 +677,17 @@ Partial Class LoansForm
     Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtAcc As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents comboStatus As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents txtTransac As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel9 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnApply As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txtEmail As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel11 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -646,11 +695,5 @@ Partial Class LoansForm
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents button As DataGridViewButtonColumn
-    Friend WithEvents comboStatus As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents txtTransac As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel9 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents btnApply As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
 End Class

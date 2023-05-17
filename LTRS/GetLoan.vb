@@ -20,7 +20,7 @@ Public Class GetLoan
 
 
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
-        If Not attach1Flag And attach2Flag = 0 Then
+        If attach1Flag And attach2Flag = 1 Then
 
             If Not String.Equals(attach1.Text, attach2.Text) Then
                 Try
@@ -46,12 +46,14 @@ Public Class GetLoan
                 Catch ex As Exception
                     MsgBox(ex.Message, vbCritical)
                 Finally
-                    create("INSERT INTO loans (`accID`, `transacDate`, `dueDate`, `principal`, `interest`, `total`, `loanstatus`)VALUES('" & Form1.UserID & "', '" & qdateToday & "', '" & qdateDue & "', '" & GetLoan2.inputLoan.Text & "', '" & GetLoan2.interestBox.Text & "', '" & GetLoan2.outputTotal.Text & "', 'Pending')")
+                    create("INSERT INTO loans (`accID`, `principal`, `interest`, `total`, `loanstatus`)VALUES('" & Form1.UserID & "', '" & GetLoan2.inputLoan.Text & "', '" & GetLoan2.interestBox.Text & "', '" & GetLoan2.outputTotal.Text & "', 'Pending')")
 
                     Dim msg As String = "Registered Successfully"
                     Dim title As String = "Registration"
                     Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+                    attach1Flag = 0
+                    attach2Flag = 0
                     Me.Hide()
                     Home.ShowDialog()
                 End Try

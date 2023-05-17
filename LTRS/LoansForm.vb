@@ -1,6 +1,8 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Drawing2D
 Imports System.Drawing.Printing
 Imports System.IO
+Imports System.Net.Mail
 Imports System.Security.Permissions
 Imports System.Windows.Forms.AxHost
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
@@ -8,8 +10,6 @@ Imports Google.Protobuf.WellKnownTypes
 Imports K4os.Compression.LZ4.Streams
 Imports MySql.Data.MySqlClient
 Imports Org.BouncyCastle.Asn1
-
-
 Public Class LoansForm
     Dim CurrentMonth As String = Today.Month
     Dim CurrentYear As String = Today.Year
@@ -23,7 +23,7 @@ Public Class LoansForm
 
         'for datagridview
         Try
-            reloaData("SELECT loans.transacID, loans.accID, login.Sname, login.Fname, loans.transacDate, loans.duedate, loans.principal, loans.loanstatus
+            reloaData("SELECT loans.transacID, loans.accID, login.email, login.Sname, login.Fname, loans.transacDate, loans.duedate, loans.principal, loans.loanstatus
                        FROM loans
                        LEFT JOIN login
                        ON loans.accID = login.id", Guna2DataGridView1)
@@ -98,10 +98,11 @@ Public Class LoansForm
                 Dim dr As DataGridViewRow = Guna2DataGridView1.SelectedRows(0)
                 txtAcc.Text = dr.Cells(2).Value.ToString()
                 txtTransac.Text = dr.Cells(1).Value.ToString()
-                txtFname.Text = dr.Cells(4).Value.ToString()
-                txtLname.Text = dr.Cells(3).Value.ToString()
-                txtAmount.Text = dr.Cells(7).Value.ToString()
-                comboStatus.Text = dr.Cells(8).Value.ToString()
+                txtEmail.Text = dr.Cells(3).Value.ToString()
+                txtFname.Text = dr.Cells(5).Value.ToString()
+                txtLname.Text = dr.Cells(4).Value.ToString()
+                txtAmount.Text = dr.Cells(8).Value.ToString()
+                comboStatus.Text = dr.Cells(9).Value.ToString()
 
 
             End If
@@ -121,7 +122,7 @@ Public Class LoansForm
                 reloadData("Select * FROM loans WHERE transacID= " & txtTransac.Text & "")
                 If database.dt.Rows.Count > 0 Then
 
-                    updates("UPDATE loans SET loanstatus = '" & comboStatus.Text & "' WHERE loans.transacID = " & txtTransac.Text & "")
+                    updates("UPDATE loans SET loanstatus = '" & comboStatus.Text & "', transacDAte = '" & qStartDate & "', transacDAte = '" & qEndDate & "' WHERE loans.transacID = " & txtTransac.Text & "")
                     Dim msg As String = "Record Updated Successfully"
                     Dim title As String = "Loan Status Change"
                     Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -130,6 +131,10 @@ Public Class LoansForm
                         reloadData("Select * FROM loans WHERE transacID= '" & txtTransac.Text & "' AND loanstatus = 'Approved' AND approvalNotice = 0")
                         If database.dt.Rows.Count > 0 Then
                             approvalMechanism()
+                            Threading.Thread.Sleep(3000)
+                            sendingMechanism()
+                            updates("UPDATE loans SET approvalNotice = 1 WHERE transacID = " & txtTransac.Text & "")
+                            fundUpdate()
                         Else
 
                         End If
@@ -159,12 +164,13 @@ Public Class LoansForm
         End If
 
         Try
-            reloaData("SELECT loans.transacID, loans.accID, login.Sname, login.Fname, loans.transacDate, loans.duedate, loans.principal, loans.loanstatus
+            reloaData("SELECT loans.transacID, loans.accID, login.email login.Sname, login.Fname, loans.transacDate, loans.duedate, loans.principal, loans.loanstatus
                        FROM loans
                        LEFT JOIN login
                        ON loans.accID = login.id
-                       " & qstatus & "
+                       '" & qstatus & "'
                        ", Guna2DataGridView1)
+
 
         Catch
 
@@ -172,19 +178,61 @@ Public Class LoansForm
 
     End Sub
 
-    'FilePrinter
+    Sub fundUpdate()
+        Try
+            updates("UPDATE funds SET fundAmount = '" & txtAmount.Text & "' WHERE fundID = '2'")
+            updates("UPDATE funds SET fundAmount = fundAmount - '" & txtAmount.Text & "' WHERE fundID = '1'")
+        Catch ex As Exception
 
+        End Try
+    End Sub
+
+    Sub sendingMechanism()
+
+        Try
+            Dim mail As New MailMessage()
+            Dim smtpserver As New SmtpClient("smtp.gmail.com")
+            mail.From = New MailAddress("ltrsofficial31@gmail.com")
+            mail.To.Add("beeflarkins@gmail.com")   'txtEmail.Text
+            mail.Subject = "Notice of Loan Approval"
+            mail.Body = "Your loan application has been processed. " 'need change
+
+
+            Dim Attach As System.Net.Mail.Attachment
+            Attach = New System.Net.Mail.Attachment("C:\Users\xland\Documents\LoanApproval.pdf")
+
+            '
+
+            mail.Attachments.Add(Attach)
+
+
+            smtpserver.Port = 587
+            smtpserver.Credentials = New System.Net.NetworkCredential("ltrsofficial31@gmail.com", "qrowiwzlsnhprwgt")
+            smtpserver.EnableSsl = True
+            smtpserver.Send(mail)
+            MsgBox("Mail has been Successfully Sent! ", MsgBoxStyle.Information)
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
+        Finally
+
+        End Try
+
+
+    End Sub
+
+    'FilePrinter
 
     Dim WithEvents PD As New PrintDocument
 
     Sub approvalMechanism() 'notfies client that their loan has been approved through email
 
-        Dim filenameVar As String = "Approval_" & CurrentMonth & "_" & CurrentYear & "_" & txtLname.Text & txtFname.Text & ".pdf"
+        Dim filenameVar As String = "C:\Users\xland\Documents\LoanApproval.pdf"
 
         PD.PrintController = New System.Drawing.Printing.StandardPrintController
         PD.PrinterSettings.PrintToFile = True
         PD.PrinterSettings.PrinterName = "Microsoft Print to PDF"
-        PD.PrinterSettings.PrintFileName = "C:\Users\xland\Documents\" + filenameVar 'CHANGE!!!!
+        PD.PrinterSettings.PrintFileName = filenameVar
+
         PD.Print()
 
     End Sub
@@ -277,5 +325,10 @@ Public Class LoansForm
         totalCalc = principalTemp + interestCalc
 
 
+    End Sub
+
+    Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
+        Me.Close()
+        Application.Exit()
     End Sub
 End Class
