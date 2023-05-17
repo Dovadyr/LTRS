@@ -46,7 +46,7 @@ Public Class GetLoan
                 Catch ex As Exception
                     MsgBox(ex.Message, vbCritical)
                 Finally
-                    create("INSERT INTO loans (`accID`, `transacDate`, `dueDate`, `principal`, `interest`, `total`, `status`)VALUES('" & Form1.UserID & "', '" & qdateToday & "', '" & qdateDue & "', '" & GetLoan2.inputLoan.Text & "', '" & GetLoan2.interestBox.Text & "', '" & GetLoan2.outputTotal.Text & "', '0')")
+                    create("INSERT INTO loans (`accID`, `transacDate`, `dueDate`, `principal`, `interest`, `total`, `loanstatus`)VALUES('" & Form1.UserID & "', '" & qdateToday & "', '" & qdateDue & "', '" & GetLoan2.inputLoan.Text & "', '" & GetLoan2.interestBox.Text & "', '" & GetLoan2.outputTotal.Text & "', 'Pending')")
 
                     Dim msg As String = "Registered Successfully"
                     Dim title As String = "Registration"

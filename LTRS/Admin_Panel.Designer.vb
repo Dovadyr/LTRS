@@ -28,11 +28,13 @@ Partial Class Admin_Panel
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2GradientCircleButton2 = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Me.Guna2GradientCircleButton1 = New Guna.UI2.WinForms.Guna2GradientCircleButton()
@@ -44,7 +46,6 @@ Partial Class Admin_Panel
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -73,6 +74,7 @@ Partial Class Admin_Panel
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
         Me.Guna2Panel1.Controls.Add(Me.Guna2DataGridView1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GradientCircleButton2)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GradientCircleButton1)
@@ -82,10 +84,21 @@ Partial Class Admin_Panel
         Me.Guna2Panel1.Size = New System.Drawing.Size(1459, 585)
         Me.Guna2Panel1.TabIndex = 0
         '
+        'Guna2HtmlLabel4
+        '
+        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(39, 84)
+        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(166, 26)
+        Me.Guna2HtmlLabel4.TabIndex = 11
+        Me.Guna2HtmlLabel4.Text = "Pending Loans :"
+        '
         'Guna2DataGridView1
         '
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.Guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -96,7 +109,7 @@ Partial Class Admin_Panel
         Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Guna2DataGridView1.ColumnHeadersHeight = 50
         Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column3, Me.Column2, Me.Column6})
+        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column3, Me.Column2, Me.Column5, Me.Column6})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -111,7 +124,7 @@ Partial Class Admin_Panel
         Me.Guna2DataGridView1.RowHeadersVisible = False
         Me.Guna2DataGridView1.RowHeadersWidth = 51
         Me.Guna2DataGridView1.RowTemplate.Height = 24
-        Me.Guna2DataGridView1.Size = New System.Drawing.Size(643, 427)
+        Me.Guna2DataGridView1.Size = New System.Drawing.Size(648, 427)
         Me.Guna2DataGridView1.TabIndex = 10
         Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -163,9 +176,16 @@ Partial Class Admin_Panel
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
         '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "interest"
+        Me.Column5.HeaderText = "Interest"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        '
         'Column6
         '
-        Me.Column6.DataPropertyName = "totalAmount"
+        Me.Column6.DataPropertyName = "total"
         Me.Column6.HeaderText = "Total Amount with Interest"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
@@ -228,7 +248,7 @@ Partial Class Admin_Panel
         '
         Me.ActiveLoans.BackColor = System.Drawing.Color.Transparent
         Me.ActiveLoans.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ActiveLoans.Location = New System.Drawing.Point(1171, 24)
+        Me.ActiveLoans.Location = New System.Drawing.Point(1371, 20)
         Me.ActiveLoans.Name = "ActiveLoans"
         Me.ActiveLoans.Size = New System.Drawing.Size(63, 25)
         Me.ActiveLoans.TabIndex = 11
@@ -238,17 +258,17 @@ Partial Class Admin_Panel
         '
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(588, 23)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(574, 21)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(278, 26)
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(328, 26)
         Me.Guna2HtmlLabel2.TabIndex = 11
-        Me.Guna2HtmlLabel2.Text = "Total Earnings This Month : "
+        Me.Guna2HtmlLabel2.Text = "Predicted Earnings Next Month : "
         '
         'TotalEarnings
         '
         Me.TotalEarnings.BackColor = System.Drawing.Color.Transparent
         Me.TotalEarnings.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TotalEarnings.Location = New System.Drawing.Point(872, 23)
+        Me.TotalEarnings.Location = New System.Drawing.Point(908, 21)
         Me.TotalEarnings.Name = "TotalEarnings"
         Me.TotalEarnings.Size = New System.Drawing.Size(63, 25)
         Me.TotalEarnings.TabIndex = 3
@@ -258,7 +278,7 @@ Partial Class Admin_Panel
         '
         Me.CurrentMoney.BackColor = System.Drawing.Color.Transparent
         Me.CurrentMoney.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentMoney.Location = New System.Drawing.Point(467, 22)
+        Me.CurrentMoney.Location = New System.Drawing.Point(272, 20)
         Me.CurrentMoney.Name = "CurrentMoney"
         Me.CurrentMoney.Size = New System.Drawing.Size(63, 25)
         Me.CurrentMoney.TabIndex = 1
@@ -268,7 +288,7 @@ Partial Class Admin_Panel
         '
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(1020, 23)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(1220, 19)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(145, 26)
         Me.Guna2HtmlLabel3.TabIndex = 2
@@ -278,7 +298,7 @@ Partial Class Admin_Panel
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(225, 21)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(30, 20)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(236, 26)
         Me.Guna2HtmlLabel1.TabIndex = 0
@@ -297,17 +317,6 @@ Partial Class Admin_Panel
         Me.Guna2ControlBox1.PressedColor = System.Drawing.Color.Transparent
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(34, 28)
         Me.Guna2ControlBox1.TabIndex = 1
-        '
-        'Guna2ControlBox2
-        '
-        Me.Guna2ControlBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.Guna2ControlBox2.FillColor = System.Drawing.Color.LightGray
-        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.Black
-        Me.Guna2ControlBox2.Location = New System.Drawing.Point(1363, 3)
-        Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
-        Me.Guna2ControlBox2.Size = New System.Drawing.Size(34, 28)
-        Me.Guna2ControlBox2.TabIndex = 2
         '
         'DataGridViewTextBoxColumn1
         '
@@ -343,13 +352,13 @@ Partial Class Admin_Panel
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1459, 619)
-        Me.Controls.Add(Me.Guna2ControlBox2)
         Me.Controls.Add(Me.Guna2ControlBox1)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Admin_Panel"
         Me.Text = "Admin_Panel"
         Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
@@ -365,7 +374,6 @@ Partial Class Admin_Panel
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2GradientCircleButton2 As Guna.UI2.WinForms.Guna2GradientCircleButton
@@ -389,5 +397,7 @@ Partial Class Admin_Panel
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

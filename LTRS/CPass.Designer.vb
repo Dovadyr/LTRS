@@ -29,7 +29,6 @@ Partial Class CPass
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2ControlBox4 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.NPassword = New Guna.UI2.WinForms.Guna2TextBox()
@@ -98,19 +97,6 @@ Partial Class CPass
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(231, 32)
         Me.Guna2HtmlLabel2.TabIndex = 12
         Me.Guna2HtmlLabel2.Text = "Change Password"
-        '
-        'Guna2ControlBox4
-        '
-        Me.Guna2ControlBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ControlBox4.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.Guna2ControlBox4.FillColor = System.Drawing.Color.LightGray
-        Me.Guna2ControlBox4.IconColor = System.Drawing.Color.Black
-        Me.Guna2ControlBox4.Location = New System.Drawing.Point(1026, 3)
-        Me.Guna2ControlBox4.Name = "Guna2ControlBox4"
-        Me.Guna2ControlBox4.Size = New System.Drawing.Size(34, 28)
-        Me.Guna2ControlBox4.TabIndex = 11
-        Me.Guna2ControlBox4.UseTransparentBackground = True
         '
         'Guna2ControlBox3
         '
@@ -245,7 +231,6 @@ Partial Class CPass
         Me.Controls.Add(Me.Guna2Button4)
         Me.Controls.Add(Me.Guna2HtmlLabel2)
         Me.Controls.Add(Me.Username)
-        Me.Controls.Add(Me.Guna2ControlBox4)
         Me.Controls.Add(Me.NPassword)
         Me.Controls.Add(Me.Password)
         Me.Controls.Add(Me.Guna2ControlBox3)
@@ -271,7 +256,6 @@ Partial Class CPass
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents Guna2ControlBox4 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm

@@ -5,13 +5,15 @@ Imports MySql.Data.MySqlClient
 Public Class Admin_Panel
     Dim CurrentMonth As String = Today.Month
     Dim CurrentYear As String = Today.Year
-    Dim CurrentDay As String = Today.Day
+
+    Dim qStartDate As String = CurrentYear + "-" + CurrentMonth + "-01"
+    Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-31"
 
     Private Sub Admin_Panel_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         'for datagridview
         Try
-            reloaData("SELECT transacID, accID, transacDate, principal, interest, total FROM loans", Guna2DataGridView1)
+            reloaData("SELECT transacID, accID, transacDate, principal, interest, total FROM loans WHERE loanstatus = 'Pending'", Guna2DataGridView1)
 
         Catch
 
@@ -35,17 +37,17 @@ Public Class Admin_Panel
             strcon.Close()
         End Try
 
-        'for Earnings
+        'for Predicted Earnings
         Try
             strcon.Open()
-            cmd.CommandText = "SELECT SUM(amount) AS Paid FROM payments WHERE DATE(payDate) BETWEEN '@year-@month-01' AND '@year-@month-31'"
+            cmd.CommandText = "SELECT SUM(interest) AS totalInterest FROM loans WHERE DATE(dueDate) BETWEEN ' " & qStartDate & " ' AND '" & qEndDate & "'"
 
-            cmd.Parameters.Add("@month", MySqlDbType.VarChar).Value = CurrentMonth
-            cmd.Parameters.Add("@year", MySqlDbType.VarChar).Value = CurrentYear
+            'cmd.Parameters.Add("@month", MySqlDbType.VarChar).Value = CurrentMonth
+            'cmd.Parameters.Add("@year", MySqlDbType.VarChar).Value = CurrentYear
 
             Dim myreader As MySqlDataReader = cmd.ExecuteReader
             If (myreader.Read()) Then
-                TotalEarnings.Text = myreader("Paid")
+                TotalEarnings.Text = myreader("totalInterest")
             Else
                 MessageBox.Show("No Data Found")
             End If
@@ -60,7 +62,7 @@ Public Class Admin_Panel
         'for Active Loan Count
         Try
             strcon.Open()
-            cmd.CommandText = "SELECT COUNT(*) AS active FROM loans WHERE status = '0'"
+            cmd.CommandText = "SELECT COUNT(*) AS active FROM loans WHERE loanstatus = 'Approved'"
 
             Dim myreader As MySqlDataReader = cmd.ExecuteReader
             If (myreader.Read()) Then
