@@ -18,6 +18,7 @@ Public Class LoansForm
     Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-31"
     Dim qstatus As String = "*"
 
+
     Private Sub LoansForm_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         'for datagridview
@@ -125,6 +126,17 @@ Public Class LoansForm
                     Dim title As String = "Loan Status Change"
                     Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+                    Try
+                        reloadData("Select * FROM loans WHERE transacID= '" & txtTransac.Text & "' AND loanstatus = 'Approved' AND approvalNotice = 0")
+                        If database.dt.Rows.Count > 0 Then
+                            approvalMechanism()
+                        Else
+
+                        End If
+                    Catch
+
+                    End Try
+
                 Else
                     MessageBox.Show("Failed to Update Loan Status") 'change
                 End If
@@ -162,15 +174,17 @@ Public Class LoansForm
 
     'FilePrinter
 
-    Dim WithEvents PD As New PrintDocument
-    Dim longpaper As Integer
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Dim WithEvents PD As New PrintDocument
+
+    Sub approvalMechanism() 'notfies client that their loan has been approved through email
+
+        Dim filenameVar As String = "Approval_" & CurrentMonth & "_" & CurrentYear & "_" & txtLname.Text & txtFname.Text & ".pdf"
 
         PD.PrintController = New System.Drawing.Printing.StandardPrintController
         PD.PrinterSettings.PrintToFile = True
         PD.PrinterSettings.PrinterName = "Microsoft Print to PDF"
-        PD.PrinterSettings.PrintFileName = "C:\Users\xland\Documents\test.pdf"
+        PD.PrinterSettings.PrintFileName = "C:\Users\xland\Documents\" + filenameVar 'CHANGE!!!!
         PD.Print()
 
     End Sub
@@ -246,7 +260,8 @@ Public Class LoansForm
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
         e.Graphics.DrawString("Total: " + totalTemp, f10b, Brushes.Black, rightmargin, 10 + height2, right)
 
-        e.Graphics.DrawString("~ Thank you for availing our loan ~", f10, Brushes.Black, centermargin, 70 + height2, center)
+        e.Graphics.DrawString("~ Congratulations! Your application has been APPROVED! ~", f10, Brushes.Black, centermargin, 70 + height2, center)
+        e.Graphics.DrawString("~ Thank you for availing our loan ~", f10, Brushes.Black, centermargin, 90 + height2, center)
         'e.Graphics.DrawString("~ Rosmar Kagayaku ~", f10, Brushes.Black, centermargin, 85 + height2, center)
     End Sub
 
