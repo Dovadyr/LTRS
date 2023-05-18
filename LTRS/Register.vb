@@ -88,11 +88,12 @@ Public Class Register
         End If
     End Sub
 
-    Function symbolPassword(ByVal pwd As String, Optional ByVal numSpecial As Integer = 2) As Boolean
+    Function symbolPassword(ByVal pwd As String, Optional ByVal numSpecial As Integer = 0) As Boolean
 
         Dim special As New System.Text.RegularExpressions.Regex("[^a-zA-Z0-9]")
 
-        If special.Matches(pwd).Count < numSpecial Then Return False
+        If special.Matches(pwd).Count = numSpecial Then Return False
+
         Return True
     End Function
 
