@@ -24,9 +24,12 @@ Public Class Register
         Dim span As TimeSpan
         Dim diff As Double
         Dim fdate As String
+        Dim specChar As Integer = 2
 
-        Dim regex As Regex = New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
+        Dim regex As Regex = New Regex("^[\w.+\-]+@gmail\.com$") '^[^@\s]+@[^@\s]+\.[^@\s]+$ ---> old one
         Dim isvalid As Boolean = regex.IsMatch(Email.Text.Trim)
+        Dim isspecial As New System.Text.RegularExpressions.Regex("[^a-zA-Z0-9]")
+
 
         DOB = Me.Bdate.Value.ToShortDateString
         DT = Now().ToShortDateString
@@ -45,6 +48,12 @@ Public Class Register
 
         ElseIf Not isvalid Then
             MessageBox.Show("Invalid Email address!")
+
+        ElseIf Not Password.Text.Length >= 8 Then
+            MessageBox.Show("Password must have at least 8 characters!")
+
+        ElseIf Not symbolPassword(Password.Text) = True Then
+            MessageBox.Show("Password must have at least 1 special character!")
 
         ElseIf Not Password.Text Like ConPassword.Text Then
             MessageBox.Show("Passwords do not match!")
@@ -79,11 +88,20 @@ Public Class Register
         End If
     End Sub
 
+    Function symbolPassword(ByVal pwd As String, Optional ByVal numSpecial As Integer = 2) As Boolean
+
+        Dim special As New System.Text.RegularExpressions.Regex("[^a-zA-Z0-9]")
+
+        If special.Matches(pwd).Count < numSpecial Then Return False
+        Return True
+    End Function
+
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
         Me.Hide()
         Dim Register As New Form1
         Register.ShowDialog()
     End Sub
+
 
 
 End Class

@@ -31,6 +31,11 @@ Partial Class Admin_Panel
         Me.btnToEdit = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnToLoans = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.ActiveLoans = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -49,11 +54,9 @@ Partial Class Admin_Panel
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Guna2ShadowPanel3 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
@@ -62,6 +65,9 @@ Partial Class Admin_Panel
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2ShadowPanel3.SuspendLayout()
+        Me.Guna2ShadowPanel2.SuspendLayout()
+        Me.Guna2ShadowPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -165,6 +171,41 @@ Partial Class Admin_Panel
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "transacID"
+        Me.Column1.HeaderText = "Transaction ID"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "accID"
+        Me.Column4.HeaderText = "Account ID"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "principal"
+        Me.Column2.HeaderText = "Loan Amount"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "interest"
+        Me.Column5.HeaderText = "Interest"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "total"
+        Me.Column6.HeaderText = "Total Amount with Interest"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        '
         'btnToLoans
         '
         Me.btnToLoans.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -188,12 +229,9 @@ Partial Class Admin_Panel
         Me.Guna2Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.Guna2Panel2.BorderColor = System.Drawing.Color.Black
         Me.Guna2Panel2.BorderThickness = 1
-        Me.Guna2Panel2.Controls.Add(Me.ActiveLoans)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.Guna2Panel2.Controls.Add(Me.TotalEarnings)
-        Me.Guna2Panel2.Controls.Add(Me.CurrentMoney)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel3)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2ShadowPanel3)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2ShadowPanel2)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2ShadowPanel1)
         Me.Guna2Panel2.Location = New System.Drawing.Point(9, 0)
         Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
@@ -205,7 +243,7 @@ Partial Class Admin_Panel
         '
         Me.ActiveLoans.BackColor = System.Drawing.Color.Transparent
         Me.ActiveLoans.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ActiveLoans.Location = New System.Drawing.Point(1371, 20)
+        Me.ActiveLoans.Location = New System.Drawing.Point(223, 17)
         Me.ActiveLoans.Name = "ActiveLoans"
         Me.ActiveLoans.Size = New System.Drawing.Size(63, 25)
         Me.ActiveLoans.TabIndex = 11
@@ -215,7 +253,7 @@ Partial Class Admin_Panel
         '
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(574, 21)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(15, 17)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(328, 26)
         Me.Guna2HtmlLabel2.TabIndex = 11
@@ -225,7 +263,7 @@ Partial Class Admin_Panel
         '
         Me.TotalEarnings.BackColor = System.Drawing.Color.Transparent
         Me.TotalEarnings.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TotalEarnings.Location = New System.Drawing.Point(908, 21)
+        Me.TotalEarnings.Location = New System.Drawing.Point(349, 17)
         Me.TotalEarnings.Name = "TotalEarnings"
         Me.TotalEarnings.Size = New System.Drawing.Size(63, 25)
         Me.TotalEarnings.TabIndex = 3
@@ -235,7 +273,7 @@ Partial Class Admin_Panel
         '
         Me.CurrentMoney.BackColor = System.Drawing.Color.Transparent
         Me.CurrentMoney.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentMoney.Location = New System.Drawing.Point(272, 20)
+        Me.CurrentMoney.Location = New System.Drawing.Point(260, 16)
         Me.CurrentMoney.Name = "CurrentMoney"
         Me.CurrentMoney.Size = New System.Drawing.Size(63, 25)
         Me.CurrentMoney.TabIndex = 1
@@ -245,7 +283,7 @@ Partial Class Admin_Panel
         '
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(1220, 19)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(72, 16)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(145, 26)
         Me.Guna2HtmlLabel3.TabIndex = 2
@@ -255,7 +293,7 @@ Partial Class Admin_Panel
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(30, 20)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(18, 16)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(236, 26)
         Me.Guna2HtmlLabel1.TabIndex = 0
@@ -303,40 +341,41 @@ Partial Class Admin_Panel
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.Width = 124
         '
-        'Column1
+        'Guna2ShadowPanel3
         '
-        Me.Column1.DataPropertyName = "transacID"
-        Me.Column1.HeaderText = "Transaction ID"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
+        Me.Guna2ShadowPanel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel3.Controls.Add(Me.ActiveLoans)
+        Me.Guna2ShadowPanel3.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.Guna2ShadowPanel3.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel3.Location = New System.Drawing.Point(1063, 3)
+        Me.Guna2ShadowPanel3.Name = "Guna2ShadowPanel3"
+        Me.Guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel3.Size = New System.Drawing.Size(350, 61)
+        Me.Guna2ShadowPanel3.TabIndex = 20
         '
-        'Column4
+        'Guna2ShadowPanel2
         '
-        Me.Column4.DataPropertyName = "accID"
-        Me.Column4.HeaderText = "Account ID"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
+        Me.Guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel2.Controls.Add(Me.Guna2HtmlLabel2)
+        Me.Guna2ShadowPanel2.Controls.Add(Me.TotalEarnings)
+        Me.Guna2ShadowPanel2.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(528, 3)
+        Me.Guna2ShadowPanel2.Name = "Guna2ShadowPanel2"
+        Me.Guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel2.Size = New System.Drawing.Size(430, 61)
+        Me.Guna2ShadowPanel2.TabIndex = 19
         '
-        'Column2
+        'Guna2ShadowPanel1
         '
-        Me.Column2.DataPropertyName = "principal"
-        Me.Column2.HeaderText = "Loan Amount"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "interest"
-        Me.Column5.HeaderText = "Interest"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "total"
-        Me.Column6.HeaderText = "Total Amount with Interest"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
+        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.CurrentMoney)
+        Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(30, 3)
+        Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
+        Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(350, 61)
+        Me.Guna2ShadowPanel1.TabIndex = 18
         '
         'Admin_Panel
         '
@@ -353,12 +392,17 @@ Partial Class Admin_Panel
         Me.Guna2Panel1.PerformLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel2.PerformLayout()
         CType(Me.AdminPanelDatagridBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AdminPanelDatagrid1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTable1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2ShadowPanel3.ResumeLayout(False)
+        Me.Guna2ShadowPanel3.PerformLayout()
+        Me.Guna2ShadowPanel2.ResumeLayout(False)
+        Me.Guna2ShadowPanel2.PerformLayout()
+        Me.Guna2ShadowPanel1.ResumeLayout(False)
+        Me.Guna2ShadowPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -391,4 +435,7 @@ Partial Class Admin_Panel
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2ShadowPanel3 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel2 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
 End Class

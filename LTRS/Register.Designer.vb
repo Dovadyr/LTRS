@@ -42,6 +42,7 @@ Partial Class Register
         Me.Pnum = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Bdate = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,7 +82,7 @@ Partial Class Register
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 16.0!)
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.Red
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(32, 366)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(10, 366)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(534, 32)
         Me.Guna2HtmlLabel1.TabIndex = 11
@@ -161,7 +162,7 @@ Partial Class Register
         Me.Password.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Password.Name = "Password"
         Me.Password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.Password.PlaceholderText = "Password"
+        Me.Password.PlaceholderText = "Password (Minimum of 8 Characters)"
         Me.Password.SelectedText = ""
         Me.Password.Size = New System.Drawing.Size(327, 38)
         Me.Password.TabIndex = 20
@@ -180,7 +181,7 @@ Partial Class Register
         Me.ConPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ConPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ConPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ConPassword.Location = New System.Drawing.Point(677, 327)
+        Me.ConPassword.Location = New System.Drawing.Point(677, 351)
         Me.ConPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ConPassword.Name = "ConPassword"
         Me.ConPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
@@ -200,7 +201,7 @@ Partial Class Register
         Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(735, 467)
+        Me.Guna2Button1.Location = New System.Drawing.Point(735, 491)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(206, 48)
         Me.Guna2Button1.TabIndex = 8
@@ -300,7 +301,7 @@ Partial Class Register
         '
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(677, 373)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(677, 397)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(64, 18)
         Me.Guna2HtmlLabel3.TabIndex = 25
@@ -316,7 +317,7 @@ Partial Class Register
         Me.Bdate.FillColor = System.Drawing.Color.White
         Me.Bdate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Bdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.Bdate.Location = New System.Drawing.Point(677, 397)
+        Me.Bdate.Location = New System.Drawing.Point(677, 421)
         Me.Bdate.MaxDate = New Date(2023, 5, 13, 0, 0, 0, 0)
         Me.Bdate.MinDate = New Date(1800, 12, 1, 0, 0, 0, 0)
         Me.Bdate.Name = "Bdate"
@@ -325,11 +326,22 @@ Partial Class Register
         Me.Bdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.Bdate.Value = New Date(2023, 5, 13, 0, 0, 0, 0)
         '
+        'Guna2HtmlLabel4
+        '
+        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Microsoft Tai Le", 7.260504!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(691, 326)
+        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(265, 18)
+        Me.Guna2HtmlLabel4.TabIndex = 27
+        Me.Guna2HtmlLabel4.Text = "Password must have at least one special character"
+        '
         'Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1106, 565)
+        Me.Controls.Add(Me.Guna2HtmlLabel4)
         Me.Controls.Add(Me.Bdate)
         Me.Controls.Add(Me.Guna2HtmlLabel3)
         Me.Controls.Add(Me.Pnum)
@@ -373,4 +385,5 @@ Partial Class Register
     Friend WithEvents Bdate As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Pnum As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

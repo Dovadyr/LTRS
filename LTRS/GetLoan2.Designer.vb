@@ -83,8 +83,9 @@ Partial Class GetLoan2
         '
         Me.Guna2HtmlLabel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(248, 343)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(175, 30)
@@ -191,8 +192,9 @@ Partial Class GetLoan2
         '
         Me.Guna2HtmlLabel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(270, 223)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(128, 30)
@@ -230,8 +232,9 @@ Partial Class GetLoan2
         '
         Me.Guna2HtmlLabel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(209, 473)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(255, 30)
@@ -268,8 +271,9 @@ Partial Class GetLoan2
         '
         Me.Guna2HtmlLabel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(248, 57)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(180, 30)

@@ -50,29 +50,35 @@ Partial Class LoansForm
         Me.comboShow = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2ShadowPanel3 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.ActiveLoans = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2ShadowPanel2 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TotalEarnings = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.CurrentMoney = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.CurrentMoney = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
+        Me.button = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Panel1.SuspendLayout()
         Me.Guna2GradientPanel2.SuspendLayout()
         Me.Guna2GradientPanel1.SuspendLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
+        Me.Guna2ShadowPanel3.SuspendLayout()
+        Me.Guna2ShadowPanel2.SuspendLayout()
+        Me.Guna2ShadowPanel1.SuspendLayout()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -395,7 +401,7 @@ Partial Class LoansForm
         Me.comboShow.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.comboShow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.comboShow.ItemHeight = 30
-        Me.comboShow.Items.AddRange(New Object() {"All", "Applied", "Approved", "Declined", "Finished", "Suspended"})
+        Me.comboShow.Items.AddRange(New Object() {"All", "Pending", "Approved", "Declined", "Finished", "Suspended"})
         Me.comboShow.Location = New System.Drawing.Point(3, 31)
         Me.comboShow.Name = "comboShow"
         Me.comboShow.Size = New System.Drawing.Size(180, 36)
@@ -467,96 +473,14 @@ Partial Class LoansForm
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "transacID"
-        Me.Column1.HeaderText = "Transaction ID"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "accID"
-        Me.Column4.HeaderText = "Account ID"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Column9
-        '
-        Me.Column9.DataPropertyName = "email"
-        Me.Column9.HeaderText = "Email"
-        Me.Column9.MinimumWidth = 6
-        Me.Column9.Name = "Column9"
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "Sname"
-        Me.Column5.HeaderText = "Last Name"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "Fname"
-        Me.Column6.HeaderText = "First Name"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
-        Me.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "transacDate"
-        Me.Column3.HeaderText = "Approval Date"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "dueDate"
-        Me.Column8.HeaderText = "Due Date"
-        Me.Column8.MinimumWidth = 6
-        Me.Column8.Name = "Column8"
-        Me.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "principal"
-        Me.Column2.HeaderText = "Loan Amount"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        Me.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'Column7
-        '
-        Me.Column7.DataPropertyName = "loanstatus"
-        Me.Column7.HeaderText = "Status"
-        Me.Column7.MinimumWidth = 6
-        Me.Column7.Name = "Column7"
-        Me.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'button
-        '
-        Me.button.HeaderText = "Update Status"
-        Me.button.MinimumWidth = 6
-        Me.button.Name = "button"
-        Me.button.Text = "EDIT"
-        Me.button.UseColumnTextForButtonValue = True
-        '
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.Guna2Panel2.BorderColor = System.Drawing.Color.Black
         Me.Guna2Panel2.BorderThickness = 1
-        Me.Guna2Panel2.Controls.Add(Me.ActiveLoans)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.Guna2Panel2.Controls.Add(Me.TotalEarnings)
-        Me.Guna2Panel2.Controls.Add(Me.CurrentMoney)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel3)
-        Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2ShadowPanel3)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2ShadowPanel2)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2ShadowPanel1)
         Me.Guna2Panel2.Location = New System.Drawing.Point(12, 46)
         Me.Guna2Panel2.Margin = New System.Windows.Forms.Padding(0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
@@ -564,21 +488,55 @@ Partial Class LoansForm
         Me.Guna2Panel2.Size = New System.Drawing.Size(1438, 65)
         Me.Guna2Panel2.TabIndex = 5
         '
+        'Guna2ShadowPanel3
+        '
+        Me.Guna2ShadowPanel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel3.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.Guna2ShadowPanel3.Controls.Add(Me.ActiveLoans)
+        Me.Guna2ShadowPanel3.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel3.Location = New System.Drawing.Point(1037, 1)
+        Me.Guna2ShadowPanel3.Name = "Guna2ShadowPanel3"
+        Me.Guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel3.Size = New System.Drawing.Size(350, 61)
+        Me.Guna2ShadowPanel3.TabIndex = 17
+        '
+        'Guna2HtmlLabel3
+        '
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(68, 17)
+        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(145, 26)
+        Me.Guna2HtmlLabel3.TabIndex = 2
+        Me.Guna2HtmlLabel3.Text = "Active Loans :"
+        '
         'ActiveLoans
         '
         Me.ActiveLoans.BackColor = System.Drawing.Color.Transparent
         Me.ActiveLoans.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ActiveLoans.Location = New System.Drawing.Point(1171, 24)
+        Me.ActiveLoans.Location = New System.Drawing.Point(219, 18)
         Me.ActiveLoans.Name = "ActiveLoans"
         Me.ActiveLoans.Size = New System.Drawing.Size(63, 25)
         Me.ActiveLoans.TabIndex = 11
         Me.ActiveLoans.Text = "00000"
         '
+        'Guna2ShadowPanel2
+        '
+        Me.Guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel2.Controls.Add(Me.Guna2HtmlLabel2)
+        Me.Guna2ShadowPanel2.Controls.Add(Me.TotalEarnings)
+        Me.Guna2ShadowPanel2.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(546, 1)
+        Me.Guna2ShadowPanel2.Name = "Guna2ShadowPanel2"
+        Me.Guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel2.Size = New System.Drawing.Size(389, 61)
+        Me.Guna2ShadowPanel2.TabIndex = 17
+        '
         'Guna2HtmlLabel2
         '
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(588, 23)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(15, 17)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(278, 26)
         Me.Guna2HtmlLabel2.TabIndex = 11
@@ -588,46 +546,127 @@ Partial Class LoansForm
         '
         Me.TotalEarnings.BackColor = System.Drawing.Color.Transparent
         Me.TotalEarnings.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TotalEarnings.Location = New System.Drawing.Point(872, 23)
+        Me.TotalEarnings.Location = New System.Drawing.Point(299, 17)
         Me.TotalEarnings.Name = "TotalEarnings"
         Me.TotalEarnings.Size = New System.Drawing.Size(63, 25)
         Me.TotalEarnings.TabIndex = 3
         Me.TotalEarnings.Text = "00000"
         '
-        'CurrentMoney
+        'Guna2ShadowPanel1
         '
-        Me.CurrentMoney.BackColor = System.Drawing.Color.Transparent
-        Me.CurrentMoney.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentMoney.Location = New System.Drawing.Point(467, 22)
-        Me.CurrentMoney.Name = "CurrentMoney"
-        Me.CurrentMoney.Size = New System.Drawing.Size(63, 25)
-        Me.CurrentMoney.TabIndex = 1
-        Me.CurrentMoney.Text = "00000"
-        '
-        'Guna2HtmlLabel3
-        '
-        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(1020, 23)
-        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(145, 26)
-        Me.Guna2HtmlLabel3.TabIndex = 2
-        Me.Guna2HtmlLabel3.Text = "Active Loans :"
+        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ShadowPanel1.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.Guna2ShadowPanel1.Controls.Add(Me.CurrentMoney)
+        Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.White
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(50, 1)
+        Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
+        Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(350, 61)
+        Me.Guna2ShadowPanel1.TabIndex = 12
         '
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(225, 21)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(17, 18)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(236, 26)
         Me.Guna2HtmlLabel1.TabIndex = 0
         Me.Guna2HtmlLabel1.Text = "Current Fund Amount :"
         '
+        'CurrentMoney
+        '
+        Me.CurrentMoney.BackColor = System.Drawing.Color.Transparent
+        Me.CurrentMoney.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.89076!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CurrentMoney.Location = New System.Drawing.Point(259, 19)
+        Me.CurrentMoney.Name = "CurrentMoney"
+        Me.CurrentMoney.Size = New System.Drawing.Size(63, 25)
+        Me.CurrentMoney.TabIndex = 1
+        Me.CurrentMoney.Text = "00000"
+        '
         'FileSystemWatcher1
         '
         Me.FileSystemWatcher1.EnableRaisingEvents = True
         Me.FileSystemWatcher1.SynchronizingObject = Me
+        '
+        'button
+        '
+        Me.button.HeaderText = "Update Status"
+        Me.button.MinimumWidth = 6
+        Me.button.Name = "button"
+        Me.button.Text = "EDIT"
+        Me.button.UseColumnTextForButtonValue = True
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "loanstatus"
+        Me.Column7.HeaderText = "Status"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "principal"
+        Me.Column2.HeaderText = "Loan Amount"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "dueDate"
+        Me.Column8.HeaderText = "Due Date"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "transacDate"
+        Me.Column3.HeaderText = "Approval Date"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "Fname"
+        Me.Column6.HeaderText = "First Name"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "Sname"
+        Me.Column5.HeaderText = "Last Name"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "email"
+        Me.Column9.HeaderText = "Email"
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "accID"
+        Me.Column4.HeaderText = "Account ID"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "transacID"
+        Me.Column1.HeaderText = "Transaction ID"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'LoansForm
         '
@@ -648,7 +687,12 @@ Partial Class LoansForm
         Me.Guna2GradientPanel1.PerformLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel2.PerformLayout()
+        Me.Guna2ShadowPanel3.ResumeLayout(False)
+        Me.Guna2ShadowPanel3.PerformLayout()
+        Me.Guna2ShadowPanel2.ResumeLayout(False)
+        Me.Guna2ShadowPanel2.PerformLayout()
+        Me.Guna2ShadowPanel1.ResumeLayout(False)
+        Me.Guna2ShadowPanel1.PerformLayout()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -685,6 +729,10 @@ Partial Class LoansForm
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtEmail As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel11 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
+    Friend WithEvents Guna2ShadowPanel3 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel2 As Guna.UI2.WinForms.Guna2ShadowPanel
+    Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
@@ -695,5 +743,4 @@ Partial Class LoansForm
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents button As DataGridViewButtonColumn
-    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
 End Class

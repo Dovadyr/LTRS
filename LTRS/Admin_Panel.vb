@@ -5,10 +5,13 @@ Imports MySql.Data.MySqlClient
 Public Class Admin_Panel
     Dim CurrentMonth As String = Today.Month
     Dim CurrentYear As String = Today.Year
+    Dim nextMonth As Date = DateAdd("m", 1, Today.Month)
 
     Dim qStartDate As String = CurrentYear + "-" + CurrentMonth + "-01"
     Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-31"
 
+    Dim qPredictStart As String = CurrentYear + "-" + nextMonth + "-01"
+    Dim qPredictEnd As String = CurrentYear + "-" + nextMonth + "-31"
     Private Sub Admin_Panel_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         'for datagridview
@@ -40,7 +43,7 @@ Public Class Admin_Panel
         'for Predicted Earnings
         Try
             strcon.Open()
-            cmd.CommandText = "SELECT SUM(interest) AS totalInterest FROM loans WHERE DATE(dueDate) BETWEEN ' " & qStartDate & " ' AND '" & qEndDate & "'"
+            cmd.CommandText = "SELECT SUM(interest) AS totalInterest FROM loans WHERE DATE(dueDate) BETWEEN ' " & qPredictStart & " ' AND '" & qPredictEnd & "'"
 
             'cmd.Parameters.Add("@month", MySqlDbType.VarChar).Value = CurrentMonth
             'cmd.Parameters.Add("@year", MySqlDbType.VarChar).Value = CurrentYear
