@@ -224,7 +224,7 @@ Public Class LoansForm
             Dim mail As New MailMessage()
             Dim smtpserver As New SmtpClient("smtp.gmail.com")
             mail.From = New MailAddress("ltrsofficial31@gmail.com")
-            mail.To.Add("beeflarkins@gmail.com")   'txtEmail.Text
+            mail.To.Add(txtEmail.Text)   '
             mail.Subject = "Notice of Loan Approval"
             mail.Body = "Your loan application has been processed. " 'need change
 
@@ -350,7 +350,7 @@ Public Class LoansForm
             Dim mail As New MailMessage()
             Dim smtpserver As New SmtpClient("smtp.gmail.com")
             mail.From = New MailAddress("ltrsofficial31@gmail.com")
-            mail.To.Add("txtEmail.Text")
+            mail.To.Add(txtEmail.Text)
             mail.Subject = "Acknowledgement of Payment"
             mail.Body = "Your payment has been processed!" 'need change
 
