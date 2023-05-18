@@ -127,7 +127,7 @@ Public Class LoansForm
                 reloadData("Select * FROM loans WHERE transacID= " & txtTransac.Text & "")
                 If database.dt.Rows.Count > 0 Then
 
-                    updates("UPDATE loans SET loanstatus = '" & comboStatus.Text & "', transacDAte = '" & qStartDate & "', transacDAte = '" & qEndDate & "' WHERE loans.transacID = " & txtTransac.Text & "")
+                    updates("UPDATE loans SET loanstatus = '" & comboStatus.Text & "' WHERE loans.transacID = " & txtTransac.Text & "")
                     Dim msg As String = "Record Updated Successfully"
                     Dim title As String = "Loan Status Change"
                     Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -139,7 +139,7 @@ Public Class LoansForm
                             approvalMechanism()
                             Threading.Thread.Sleep(3000)
                             approveSendingMechanism()
-                            updates("UPDATE loans SET approvalNotice = 1 WHERE transacID = " & txtTransac.Text & "")
+                            updates("UPDATE loans SET transacDate = '" & qStartDate & "', dueDate = '" & qEndDate & "' approvalNotice = 1 WHERE transacID = " & txtTransac.Text & "")
                             approveFundUpdate()
                         Else
 
