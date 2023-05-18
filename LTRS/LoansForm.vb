@@ -156,6 +156,7 @@ Public Class LoansForm
                             Threading.Thread.Sleep(3000)
                             finishsendingMechanism()
                             updates("UPDATE loans SET finishNotice = 1 WHERE transacID = " & txtTransac.Text & "")
+                            updates("UPDATE payments SET amount = '" & totalCalc & "' WHERE transacID = " & txtTransac.Text & "")
                             finishFundUpdate()
                         Else
 
