@@ -54,8 +54,9 @@ Public Class GetLoan
 
                     attach1Flag = 0
                     attach2Flag = 0
+
+                    Home.Show()
                     Me.Hide()
-                    Home.ShowDialog()
                 End Try
 
             Else

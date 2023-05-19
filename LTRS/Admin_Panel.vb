@@ -5,15 +5,18 @@ Imports MySql.Data.MySqlClient
 Public Class Admin_Panel
     Dim CurrentMonth As String = Today.Month
     Dim CurrentYear As String = Today.Year
-    Dim nextMonth As Date = DateAdd("m", 1, Today.Month)
+    Dim nextMonth As Date = DateAdd("d", 30, Date.Today)
+    Dim nextMonthStr As String = nextMonth.ToString("MM")
+    Dim nextDayStr As String = nextMonth.ToString("MM") '
 
     Dim qStartDate As String = CurrentYear + "-" + CurrentMonth + "-01"
-    Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-31"
+    Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-30"
 
-    Dim qPredictStart As String = CurrentYear + "-" + nextMonth + "-01"
-    Dim qPredictEnd As String = CurrentYear + "-" + nextMonth + "-31"
+    Dim qPredictStart As String = CurrentYear + "-" + nextMonthStr + "-01"
+    Dim qPredictEnd As String = CurrentYear + "-" + nextMonthStr + "-30"
+    'Dim qPredictEnd As String = nextMonth
+
     Private Sub Admin_Panel_Load(sender As Object, e As EventArgs) Handles Me.Load
-
         'for datagridview
         Try
             reloaData("SELECT transacID, accID, principal, interest, total FROM loans WHERE loanstatus = 'Pending'", Guna2DataGridView1)

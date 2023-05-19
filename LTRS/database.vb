@@ -11,7 +11,7 @@ Module database
 
 
     Public Function strconnection() As MySqlConnection
-        Return New MySqlConnection("server=localhost; username=root; password =; database=ltrs; convert zero datetime=True;")
+        Return New MySqlConnection("server=localhost; username=root; password =; database=ltrs; convert zero datetime=True; convert zero datetime=True;")
     End Function
 
 

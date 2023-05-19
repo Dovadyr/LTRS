@@ -13,13 +13,17 @@ Imports Org.BouncyCastle.Asn1
 Public Class LoansForm
     Dim CurrentMonth As String = Today.Month
     Dim CurrentYear As String = Today.Year
-    Dim nextMonth As Date = DateAdd("m", 1, Today.Month)
+    Dim nextMonth As Date = DateAdd("d", 30, Date.Now)
+    Dim nextMonthStr As String = nextMonth.ToString("MM")
+    Dim nextDayStr As String = nextMonth.ToString("MM") '
 
     Dim qStartDate As String = CurrentYear + "-" + CurrentMonth + "-01"
-    Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-31"
+    Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-30"
 
-    Dim qPredictStart As String = CurrentYear + "-" + nextMonth + "-01"
-    Dim qPredictEnd As String = CurrentYear + "-" + nextMonth + "-31"
+    Dim qPredictStart As String = CurrentYear + "-" + nextMonthStr + "-01"
+    Dim qPredictEnd As String = CurrentYear + "-" + nextMonthStr + "-30"
+
+
 
     Dim qstatus As String = "*"
 
@@ -139,7 +143,7 @@ Public Class LoansForm
                             approvalMechanism()
                             Threading.Thread.Sleep(3000)
                             approveSendingMechanism()
-                            updates("UPDATE loans SET transacDate = '" & qStartDate & "', dueDate = '" & qEndDate & "' approvalNotice = 1 WHERE transacID = " & txtTransac.Text & "")
+                            updates("UPDATE loans SET transacDate = '" & qStartDate & "', dueDate = '" & qEndDate & "', approvalNotice = 1 WHERE transacID = " & txtTransac.Text & "")
                             approveFundUpdate()
                         Else
 
@@ -187,7 +191,7 @@ Public Class LoansForm
         End If
 
         Try
-            reloaData("SELECT loans.transacID, loans.accID, login.email login.Sname, login.Fname, loans.transacDate, loans.duedate, loans.principal, loans.loanstatus
+            reloaData("SELECT loans.transacID, loans.accID, login.email, login.Sname, login.Fname, loans.transacDate, loans.duedate, loans.principal, loans.loanstatus
                        FROM loans
                        LEFT JOIN login
                        ON loans.accID = login.id
