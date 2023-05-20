@@ -154,6 +154,24 @@
     <Compile Include="Admin_Panel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClientsArchived.Designer.vb">
+      <DependentUpon>ClientsArchived.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsArchived.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientsPending.Designer.vb">
+      <DependentUpon>ClientsPending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsPending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientsVerified.Designer.vb">
+      <DependentUpon>ClientsVerified.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsVerified.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CPass.Designer.vb">
       <DependentUpon>CPass.vb</DependentUpon>
     </Compile>
@@ -229,6 +247,16 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin_Panel.resx">
       <DependentUpon>Admin_Panel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientsArchived.resx">
+      <DependentUpon>ClientsArchived.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientsPending.resx">
+      <DependentUpon>ClientsPending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientsVerified.resx">
+      <DependentUpon>ClientsVerified.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPass.resx">
       <DependentUpon>CPass.vb</DependentUpon>
@@ -255,7 +283,7 @@
       <DependentUpon>MainHome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
@@ -276,6 +304,7 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <Resource Include="Resources\TermsAndConditions.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-no-background1.png" />

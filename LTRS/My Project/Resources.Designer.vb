@@ -26,7 +26,7 @@ Namespace My.Resources
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
-    Friend Module Resources
+    Public Module Resources
         
         Private resourceMan As Global.System.Resources.ResourceManager
         
@@ -36,7 +36,7 @@ Namespace My.Resources
         '''  Returns the cached ResourceManager instance used by this class.
         '''</summary>
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
-        Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
+        Public ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
                     Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("LTRS.Resources", GetType(Resources).Assembly)
@@ -51,7 +51,7 @@ Namespace My.Resources
         '''  resource lookups using this strongly typed resource class.
         '''</summary>
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
-        Friend Property Culture() As Global.System.Globalization.CultureInfo
+        Public Property Culture() As Global.System.Globalization.CultureInfo
             Get
                 Return resourceCulture
             End Get
@@ -63,10 +63,20 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property logo_no_background() As System.Drawing.Bitmap
+        Public ReadOnly Property logo_no_background() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("logo-no-background", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Public ReadOnly Property TermsAndConditions() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("TermsAndConditions", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
     End Module

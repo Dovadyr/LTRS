@@ -99,4 +99,19 @@ Public Class Admin_Panel
         Application.Exit()
 
     End Sub
+
+    Private Sub btnToClients_Click(sender As Object, e As EventArgs) Handles btnToVerified.Click
+        Me.Hide()
+        ClientsVerified.Show()
+    End Sub
+
+    Private Sub btnToPending_Click(sender As Object, e As EventArgs) Handles btnToPending.Click
+        Me.Hide()
+        ClientsPending.Show()
+    End Sub
+
+    Private Sub Guna2GradientCircleButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientCircleButton2.Click
+        Me.Hide()
+        ClientsArchived.Show()
+    End Sub
 End Class

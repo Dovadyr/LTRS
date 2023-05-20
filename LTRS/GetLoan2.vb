@@ -43,7 +43,7 @@ Public Class GetLoan2
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         If Not aFlag = False Then
             Me.Hide()
-            GetLoan.ShowDialog()
+            Home.ShowDialog()
 
         Else
             MessageBox.Show("Please enter the desired loan amount and press COMPUTE button")
