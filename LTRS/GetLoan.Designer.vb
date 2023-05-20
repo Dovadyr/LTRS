@@ -44,6 +44,8 @@ Partial Class GetLoan
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnID = New Guna.UI2.WinForms.Guna2Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -68,6 +70,8 @@ Partial Class GetLoan
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel7)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel6)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel5)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
@@ -108,7 +112,7 @@ Partial Class GetLoan
         '
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(182, 334)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(182, 393)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(6, 19)
         Me.Guna2HtmlLabel5.TabIndex = 21
@@ -118,7 +122,7 @@ Partial Class GetLoan
         '
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(182, 209)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(182, 252)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(6, 19)
         Me.Guna2HtmlLabel4.TabIndex = 20
@@ -156,7 +160,7 @@ Partial Class GetLoan
         Me.btnBill.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.btnBill.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnBill.ForeColor = System.Drawing.Color.White
-        Me.btnBill.Location = New System.Drawing.Point(37, 321)
+        Me.btnBill.Location = New System.Drawing.Point(37, 380)
         Me.btnBill.Name = "btnBill"
         Me.btnBill.Size = New System.Drawing.Size(127, 42)
         Me.btnBill.TabIndex = 18
@@ -166,7 +170,7 @@ Partial Class GetLoan
         '
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(37, 285)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(37, 344)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(142, 30)
         Me.Guna2HtmlLabel3.TabIndex = 17
@@ -190,7 +194,7 @@ Partial Class GetLoan
         Me.Guna2Button4.PressedColor = System.Drawing.Color.Transparent
         Me.Guna2Button4.Size = New System.Drawing.Size(164, 72)
         Me.Guna2Button4.TabIndex = 12
-        Me.Guna2Button4.Text = "Send"
+        Me.Guna2Button4.Text = "Submit"
         '
         'Guna2HtmlLabel1
         '
@@ -206,7 +210,7 @@ Partial Class GetLoan
         '
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(37, 162)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(37, 205)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(80, 30)
         Me.Guna2HtmlLabel2.TabIndex = 4
@@ -224,7 +228,7 @@ Partial Class GetLoan
         Me.btnID.FillColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.btnID.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnID.ForeColor = System.Drawing.Color.White
-        Me.btnID.Location = New System.Drawing.Point(37, 198)
+        Me.btnID.Location = New System.Drawing.Point(37, 241)
         Me.btnID.Name = "btnID"
         Me.btnID.Size = New System.Drawing.Size(127, 42)
         Me.btnID.TabIndex = 7
@@ -233,6 +237,26 @@ Partial Class GetLoan
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Guna2HtmlLabel6
+        '
+        Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(194, 289)
+        Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
+        Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(292, 18)
+        Me.Guna2HtmlLabel6.TabIndex = 23
+        Me.Guna2HtmlLabel6.Text = "Accepts only pdf, jpg, and png file formats"
+        '
+        'Guna2HtmlLabel7
+        '
+        Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(194, 425)
+        Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
+        Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(292, 18)
+        Me.Guna2HtmlLabel7.TabIndex = 24
+        Me.Guna2HtmlLabel7.Text = "Accepts only pdf, jpg, and png file formats"
         '
         'GetLoan
         '
@@ -262,4 +286,6 @@ Partial Class GetLoan
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2HtmlLabel6 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

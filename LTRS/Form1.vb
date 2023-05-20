@@ -86,4 +86,12 @@ Public Class Form1
         Me.Hide()
         MainHome.ShowDialog()
     End Sub
+
+    Private Sub passCheckbox_CheckedChanged(sender As Object, e As EventArgs) Handles passCheckbox.CheckedChanged
+        If passCheckbox.Checked = True Then
+            Password.PasswordChar = ""
+        Else
+            Password.PasswordChar = "*"
+        End If
+    End Sub
 End Class

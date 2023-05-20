@@ -103,6 +103,13 @@ Public Class Register
         Register.ShowDialog()
     End Sub
 
-
-
+    Private Sub passCheckbox_CheckedChanged(sender As Object, e As EventArgs) Handles passCheckbox.CheckedChanged
+        If passCheckbox.Checked = True Then
+            Password.PasswordChar = ""
+            ConPassword.PasswordChar = ""
+        Else
+            Password.PasswordChar = "*"
+            ConPassword.PasswordChar = "*"
+        End If
+    End Sub
 End Class

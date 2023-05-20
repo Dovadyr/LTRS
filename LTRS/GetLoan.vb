@@ -29,7 +29,7 @@ Public Class GetLoan
                     mail.From = New MailAddress("ltrsofficial31@gmail.com")
                     mail.To.Add("ltrsofficial0@gmail.com")
                     mail.Subject = "Initial Loan Requirements"
-                    mail.Body = "Amount to Borrow : " + GetLoan2.loanAmountHolder
+                    mail.Body = "Name : " + GetLoan2.loanAmountHolder
 
                     Dim Attach As System.Net.Mail.Attachment
                     Attach = New System.Net.Mail.Attachment(attach1.Text)

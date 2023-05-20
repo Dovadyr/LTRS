@@ -13,7 +13,7 @@ Public Class Admin_Panel
     Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-30"
 
     Dim qPredictStart As String = CurrentYear + "-" + nextMonthStr + "-01"
-    Dim qPredictEnd As String = CurrentYear + "-" + nextMonthStr + "-30"
+    Dim qPredictEnd As String = CurrentYear + "-" + nextMonthStr + "-31"
     'Dim qPredictEnd As String = nextMonth
 
     Private Sub Admin_Panel_Load(sender As Object, e As EventArgs) Handles Me.Load

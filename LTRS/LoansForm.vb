@@ -21,7 +21,7 @@ Public Class LoansForm
     Dim qEndDate As String = CurrentYear + "-" + CurrentMonth + "-30"
 
     Dim qPredictStart As String = CurrentYear + "-" + nextMonthStr + "-01"
-    Dim qPredictEnd As String = CurrentYear + "-" + nextMonthStr + "-30"
+    Dim qPredictEnd As String = CurrentYear + "-" + nextMonthStr + "-31"
 
 
 
