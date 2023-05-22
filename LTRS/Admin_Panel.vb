@@ -101,8 +101,6 @@ Public Class Admin_Panel
 
     End Sub
 
-
-
     Private Sub btnToPending_Click(sender As Object, e As EventArgs) Handles btnToPending.Click
         Me.Hide()
         ClientsPending.ShowDialog()
