@@ -62,7 +62,8 @@ Public Class GetLoan
                         mail.From = New MailAddress("ltrsofficial31@gmail.com")
                         mail.To.Add("ltrsofficial0@gmail.com")
                         mail.Subject = "Initial Requirements"
-                        mail.Body = "Name : " + Register.Sname.Text + ", " + Register.Fname.Text
+                        mail.Body = "Name : " + Register.Sname.Text + ", " + Register.Fname.Text & Environment.NewLine &
+                                    "Address : " + Guna2TextBox1.Text + " " & Environment.NewLine
 
                         Dim Attach As System.Net.Mail.Attachment
                         Attach = New System.Net.Mail.Attachment(attach1.Text)
