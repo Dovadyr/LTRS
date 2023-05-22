@@ -74,7 +74,7 @@ Public Class MainHome
                 Dim dateString As String = dateHold.ToString("MMMM d, yyyy (dddd)")
 
                 ' Send email to the recipient
-                Dim recipient As String = "beeflarkins@gmail.com" 'row.Cells(4).Value.ToString() 
+                Dim recipient As String = row.Cells(4).Value.ToString()
                 Dim subject As String = "Due Date is near"
                 Dim body As String = "Friendly reminder that your loan that amounts to " & row.Cells(2).Value.ToString() & " is due by " & dateString & " . Failing to pay on time will come with a 1% percent penalty for each 30 days of delay which in your case will be " & penaltyHold & "  " 'Change to reminder stuff
 
