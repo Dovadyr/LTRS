@@ -23,11 +23,13 @@ Partial Class Admin_Panel
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnToArchived = New Guna.UI2.WinForms.Guna2GradientCircleButton()
+        Me.btnToPending = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Me.btnToVerified = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Me.btnToEdit = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -58,8 +60,6 @@ Partial Class Admin_Panel
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.btnToPending = New Guna.UI2.WinForms.Guna2GradientCircleButton()
-        Me.Guna2GradientCircleButton2 = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
@@ -82,7 +82,7 @@ Partial Class Admin_Panel
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.Guna2Panel1.Controls.Add(Me.Guna2GradientCircleButton2)
+        Me.Guna2Panel1.Controls.Add(Me.btnToArchived)
         Me.Guna2Panel1.Controls.Add(Me.btnToPending)
         Me.Guna2Panel1.Controls.Add(Me.btnToVerified)
         Me.Guna2Panel1.Controls.Add(Me.btnToEdit)
@@ -94,6 +94,42 @@ Partial Class Admin_Panel
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(1484, 598)
         Me.Guna2Panel1.TabIndex = 0
+        '
+        'btnToArchived
+        '
+        Me.btnToArchived.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnToArchived.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnToArchived.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnToArchived.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnToArchived.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnToArchived.FillColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnToArchived.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnToArchived.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
+        Me.btnToArchived.ForeColor = System.Drawing.Color.White
+        Me.btnToArchived.Location = New System.Drawing.Point(1260, 396)
+        Me.btnToArchived.Name = "btnToArchived"
+        Me.btnToArchived.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.btnToArchived.Size = New System.Drawing.Size(164, 132)
+        Me.btnToArchived.TabIndex = 15
+        Me.btnToArchived.Text = "Archived Accounts"
+        '
+        'btnToPending
+        '
+        Me.btnToPending.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnToPending.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnToPending.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnToPending.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnToPending.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnToPending.FillColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnToPending.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnToPending.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
+        Me.btnToPending.ForeColor = System.Drawing.Color.White
+        Me.btnToPending.Location = New System.Drawing.Point(875, 396)
+        Me.btnToPending.Name = "btnToPending"
+        Me.btnToPending.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.btnToPending.Size = New System.Drawing.Size(164, 132)
+        Me.btnToPending.TabIndex = 14
+        Me.btnToPending.Text = "Pending Verification"
         '
         'btnToVerified
         '
@@ -143,28 +179,28 @@ Partial Class Admin_Panel
         '
         'Guna2DataGridView1
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Guna2DataGridView1.ColumnHeadersHeight = 50
         Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column4, Me.Column2, Me.Column5, Me.Column6})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
         Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2DataGridView1.Location = New System.Drawing.Point(39, 116)
         Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
@@ -401,42 +437,6 @@ Partial Class Admin_Panel
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.Width = 124
         '
-        'btnToPending
-        '
-        Me.btnToPending.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnToPending.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnToPending.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnToPending.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnToPending.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnToPending.FillColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.btnToPending.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.btnToPending.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.btnToPending.ForeColor = System.Drawing.Color.White
-        Me.btnToPending.Location = New System.Drawing.Point(875, 396)
-        Me.btnToPending.Name = "btnToPending"
-        Me.btnToPending.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.btnToPending.Size = New System.Drawing.Size(164, 132)
-        Me.btnToPending.TabIndex = 14
-        Me.btnToPending.Text = "Pending Verification"
-        '
-        'Guna2GradientCircleButton2
-        '
-        Me.Guna2GradientCircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientCircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientCircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientCircleButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientCircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientCircleButton2.FillColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Guna2GradientCircleButton2.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.Guna2GradientCircleButton2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!)
-        Me.Guna2GradientCircleButton2.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientCircleButton2.Location = New System.Drawing.Point(1260, 396)
-        Me.Guna2GradientCircleButton2.Name = "Guna2GradientCircleButton2"
-        Me.Guna2GradientCircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2GradientCircleButton2.Size = New System.Drawing.Size(164, 132)
-        Me.Guna2GradientCircleButton2.TabIndex = 15
-        Me.Guna2GradientCircleButton2.Text = "Archived Accounts"
-        '
         'Admin_Panel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -499,6 +499,6 @@ Partial Class Admin_Panel
     Friend WithEvents Guna2ShadowPanel2 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents btnToVerified As Guna.UI2.WinForms.Guna2GradientCircleButton
-    Friend WithEvents Guna2GradientCircleButton2 As Guna.UI2.WinForms.Guna2GradientCircleButton
+    Friend WithEvents btnToArchived As Guna.UI2.WinForms.Guna2GradientCircleButton
     Friend WithEvents btnToPending As Guna.UI2.WinForms.Guna2GradientCircleButton
 End Class

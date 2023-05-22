@@ -44,13 +44,6 @@ Partial Class ClientsArchived
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -63,6 +56,14 @@ Partial Class ClientsArchived
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.edit = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.show = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
@@ -350,7 +351,7 @@ Partial Class ClientsArchived
         Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Guna2DataGridView1.ColumnHeadersHeight = 50
         Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6, Me.Column7})
+        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6, Me.edit, Me.show})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -389,62 +390,6 @@ Partial Class ClientsArchived
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "id"
-        Me.Column4.HeaderText = "Account ID"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "Sname"
-        Me.Column1.HeaderText = "Last Name"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "Fname"
-        Me.Column2.HeaderText = "First Name"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "email"
-        Me.Column3.HeaderText = "Email"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "phonenum"
-        Me.Column5.HeaderText = "Phone Number"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "bdate"
-        Me.Column6.HeaderText = "Birthday"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = ""
-        Me.Column7.MinimumWidth = 6
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Text = "EDIT"
         '
         'Guna2Panel2
         '
@@ -511,6 +456,70 @@ Partial Class ClientsArchived
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.Width = 124
         '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "id"
+        Me.Column4.HeaderText = "Account ID"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "Sname"
+        Me.Column1.HeaderText = "Last Name"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "Fname"
+        Me.Column2.HeaderText = "First Name"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "email"
+        Me.Column3.HeaderText = "Email"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "phonenum"
+        Me.Column5.HeaderText = "Phone Number"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "bdate"
+        Me.Column6.HeaderText = "Birthday"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'edit
+        '
+        Me.edit.HeaderText = ""
+        Me.edit.MinimumWidth = 6
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Text = "EDIT"
+        '
+        'show
+        '
+        Me.show.HeaderText = ""
+        Me.show.MinimumWidth = 6
+        Me.show.Name = "show"
+        Me.show.ReadOnly = True
+        Me.show.Text = "SHOW"
+        '
         'ClientsArchived
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -572,5 +581,6 @@ Partial Class ClientsArchived
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewButtonColumn
+    Friend WithEvents edit As DataGridViewButtonColumn
+    Friend WithEvents show As DataGridViewButtonColumn
 End Class

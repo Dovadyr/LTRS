@@ -91,7 +91,8 @@ Public Class Admin_Panel
     End Sub
 
     Private Sub btnToEdit_Click(sender As Object, e As EventArgs) Handles btnToEdit.Click
-
+        Me.Hide()
+        EditFund.ShowDialog()
     End Sub
 
     Private Sub Guna2ControlBox1_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox1.Click
@@ -100,18 +101,20 @@ Public Class Admin_Panel
 
     End Sub
 
-    Private Sub btnToClients_Click(sender As Object, e As EventArgs) Handles btnToVerified.Click
-        Me.Hide()
-        ClientsVerified.Show()
-    End Sub
+
 
     Private Sub btnToPending_Click(sender As Object, e As EventArgs) Handles btnToPending.Click
         Me.Hide()
-        ClientsPending.Show()
+        ClientsPending.ShowDialog()
     End Sub
 
-    Private Sub Guna2GradientCircleButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientCircleButton2.Click
+    Private Sub btnToArchived_Click(sender As Object, e As EventArgs) Handles btnToArchived.Click
         Me.Hide()
-        ClientsArchived.Show()
+        ClientsArchived.ShowDialog()
+    End Sub
+
+    Private Sub btnToVerified_Click(sender As Object, e As EventArgs) Handles btnToVerified.Click
+        Me.Hide()
+        ClientsVerified.ShowDialog()
     End Sub
 End Class

@@ -62,7 +62,8 @@ Partial Class ClientsVerified
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.edit = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.show = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
@@ -350,7 +351,7 @@ Partial Class ClientsVerified
         Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Guna2DataGridView1.ColumnHeadersHeight = 50
         Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6, Me.Column7})
+        Me.Guna2DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6, Me.edit, Me.show})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.865546!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -509,13 +510,20 @@ Partial Class ClientsVerified
         Me.Column6.ReadOnly = True
         Me.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
-        'Column7
+        'edit
         '
-        Me.Column7.HeaderText = ""
-        Me.Column7.MinimumWidth = 6
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Text = "EDIT"
+        Me.edit.HeaderText = "Update"
+        Me.edit.MinimumWidth = 6
+        Me.edit.Name = "edit"
+        Me.edit.ReadOnly = True
+        Me.edit.Text = ""
+        '
+        'show
+        '
+        Me.show.HeaderText = "Show"
+        Me.show.MinimumWidth = 6
+        Me.show.Name = "show"
+        Me.show.ReadOnly = True
         '
         'ClientsVerified
         '
@@ -578,5 +586,6 @@ Partial Class ClientsVerified
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewButtonColumn
+    Friend WithEvents edit As DataGridViewButtonColumn
+    Friend WithEvents show As DataGridViewButtonColumn
 End Class

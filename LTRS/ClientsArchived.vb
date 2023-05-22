@@ -23,15 +23,31 @@ Public Class ClientsArchived
 
     Private Sub Guna2DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DataGridView1.CellContentClick
         Try
-            If Guna2DataGridView1.Columns(e.ColumnIndex).Name = "Column7" Then
+            If Guna2DataGridView1.Columns(e.ColumnIndex).Name = "edit" Then
                 Dim dr As DataGridViewRow = Guna2DataGridView1.SelectedRows(0)
-                Guna2TextBox1.Text = dr.Cells(1).Value.ToString()
-                Guna2TextBox2.Text = dr.Cells(2).Value.ToString()
-                Guna2TextBox3.Text = dr.Cells(3).Value.ToString()
-                Guna2TextBox4.Text = dr.Cells(4).Value.ToString()
-                Guna2TextBox5.Text = dr.Cells(5).Value.ToString()
-                Guna2TextBox6.Text = dr.Cells(6).Value.ToString()
-                Guna2ComboBox1.Text = dr.Cells(7).Value.ToString()
+                Guna2TextBox1.Text = dr.Cells(2).Value.ToString()
+                Guna2TextBox2.Text = dr.Cells(3).Value.ToString()
+                Guna2TextBox3.Text = dr.Cells(4).Value.ToString()
+                Guna2TextBox4.Text = dr.Cells(5).Value.ToString()
+                Guna2TextBox5.Text = dr.Cells(6).Value.ToString()
+                Guna2TextBox6.Text = dr.Cells(7).Value.ToString()
+                Guna2ComboBox1.Text = dr.Cells(8).Value.ToString()
+
+            ElseIf Guna2DataGridView1.Columns(e.ColumnIndex).Name = "show" Then
+                Dim dr As DataGridViewRow = Guna2DataGridView1.SelectedRows(0)
+                Guna2TextBox1.Text = dr.Cells(2).Value.ToString()
+                Guna2TextBox2.Text = dr.Cells(3).Value.ToString()
+                Guna2TextBox3.Text = dr.Cells(4).Value.ToString()
+                Guna2TextBox4.Text = dr.Cells(5).Value.ToString()
+                Guna2TextBox5.Text = dr.Cells(6).Value.ToString()
+                Guna2TextBox6.Text = dr.Cells(7).Value.ToString()
+
+
+                publicvariables.txtID = Guna2TextBox1.Text
+                publicvariables.txtSname = Guna2TextBox2.Text
+                publicvariables.txtFname = Guna2TextBox3.Text
+
+                LoansHistory.Show()
 
             End If
 
